@@ -13,7 +13,7 @@
     <title>Reto JavaScript Equipo COOL</title>
   </head>
   <body>
-    <header>
+    <header> <!-- La parte superior con la hamburguesa que no hace nada. AQUI ESTÁ EL SEARCH -->
       <div class="headerContainer">
         <section class="hamburgerContainer">
           <div class="hamburger">
@@ -38,7 +38,8 @@
     </header>
     <main>
       <div class="mainContainer">
-        <aside class="asideLeft">
+        
+        <aside class="asideLeft"> <!-- ASIDE IZQUIERDO-->
           <section class="logInBox">
             <h2 class="titleLogIn">
               DEV Community is a community of 1,192,404 amazing developers
@@ -160,14 +161,19 @@
           </section>
         </aside>
 
-        <section class="juniorCard">
+        <section class="juniorCard"> <!-- SECCION CENTRAL -->
+
+          <!--  
+          AQUI DEBE IR LA CAJA DE CREAR LOS POST
+        -->
+
           <div class="middleNav">
-            <a href="/"><strong>Relevant</strong></a>
-            <a href="/">Latest </a>
-            <a href="/">Top </a>
+            <a href="/"><strong>Relevant</strong></a> <!-- aquí debería ordenar por lo que nos de la gana -->
+            <a href="/">Latest </a> <!-- aquí debería ordenar por más nuevos -->
+            <a href="/">Top </a> <!-- aquí debería ordenar por más likes -->
           </div>
           <img src="/assets/red_horizon.jpg" class="fullWidth" alt="red mountains at the horizon"/>
-          <div class="juniorDevSectionPadding">
+          <div class="juniorDevSectionPadding"> <!-- esta es la primera caja... esto es lo que hay que replicar, con distintos valores-->
             <aside>
               <div class="profileInfo">
                 <img src="/assets/rounded-profile.png" class="profileImage" alt="profile picture of a guy smiling"/>
@@ -206,7 +212,7 @@
             </div>
           </div>
 
-          <div class="juniorDevSectionPadding">
+          <div class="juniorDevSectionPadding"> <!-- segunda caja -->
             <aside>
               <div class="profileInfo">
                 <img src="/assets/333862a1-0a15-479e-b0be-8e7da338b948.webp" class="profileImage" alt="profile picture of a guy smiling"/>
@@ -244,7 +250,7 @@
             </div>
           </div>
 
-          <div class="juniorDevSectionPadding">
+          <div class="juniorDevSectionPadding"> <!-- tercera caja -->
             <aside>
               <div class="profileInfo">
                 <img src="/assets/9e63c9bc-4d9d-4638-b411-d0ec95dbb351.webp" class="profileImage" alt="profile picture of a guy smiling"/>
@@ -282,7 +288,7 @@
             </div>
           </div>
 
-          <div class="juniorDevSectionPadding">
+          <div class="juniorDevSectionPadding"> <!-- cuarta caja -->
             <aside>
               <div class="profileInfo">
                 <img src="/assets/eca2026d-899d-42d6-b7a5-7eea107afbab.webp" class="profileImage" alt="profile picture of a guy smiling"/>
@@ -334,7 +340,7 @@
             </div>
           </div>
 
-          <div class="juniorDevSectionPadding">
+          <div class="juniorDevSectionPadding"> <!-- quinta caja -->
             <aside>
               <div class="profileInfo">
                 <img src="/assets/f0514090-260b-4a34-89b0-a2b6e922d5ec.webp" class="profileImage" alt="profile picture of a guy smiling"/>
@@ -372,8 +378,11 @@
             </div>
           </div>
 
-          <!--Lalo section-->
-          <div class="cajaFlex">
+
+          <!-- las cajas de post nuevos se deberían crear, en teoria, AQUI-->
+
+
+          <div class="cajaFlex"> <!-- En estas tarjetas nos podemos poner nosotros y las cosas que hizo cada uno -->
             <article class="articulo">
               <div class="contenedorImagen">
                 <h4>DEV Community</h4>
@@ -443,11 +452,10 @@
               </div>
             </article>
           </div>
-          <!--fin lalo section-->
         </section>
 
-        <!-- vero section -->
-        <section class="sideCardContainer">
+        
+        <section class="sideCardContainer"> <!-- este es el lado derecho -->
           <div class="sideCard">
             <p class="cardTitle">#discuss</p>
             <div class="linkAndCommentSection">
