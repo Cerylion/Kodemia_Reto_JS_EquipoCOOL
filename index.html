@@ -9,8 +9,6 @@
         <link rel="stylesheet" href="./css/to-junior-dev.css" />
         <link rel="stylesheet" href="./css/sideCard.css" />
         <link rel="stylesheet" href="./css/weekly.css" />
-
-
         <title>DEV Community</title>
     </head>
     <body>
@@ -19,17 +17,19 @@
                     <section class="hamburgerContainer">
                         <div class="hamburger">
                             <i class="fa-solid fa-bars" style="font-size: 25px"></i>
-                        </div>
+                        </div class ="content-table">
                         <img src="./assets/dev.png" class="logo" alt="logo" />
                         <div class="inputContainer">
                             <input
                                 type="text"
                                 placeholder="Search..."
                                 class="inputNav"
-                            /><i
+                                id="input-search"
+                            /><a class="src" ></a><submit class="btn"><i
+                                id="src"
                                 class="fa-solid fa-magnifying-glass inputGlass"
                                 style="font-size: 20px"
-                            ></i>
+                            ></i></submit></a>
                         </div>
                     </section>
                     <section class="searchContainer">
@@ -297,7 +297,8 @@
                         class="fullWidth"
                         alt="red mountains at the horizon"
                     />
-                    <div class="juniorDevSectionPadding">
+                    
+                    <div class="juniorDevSectionPadding" >
                         <aside>
                             <div class="profileInfo">
                                 <img
@@ -318,8 +319,9 @@
                                 </div>
                             </div>
                         </aside>
+                   
                         <div class="paddingOnDesktop">
-                            <h1 class="mainTitle">To Junior Developers</h1>
+                           <h1 class="mainTitle">To Junior Developers</h1>
                             <aside class="tagSection">
                                 <p class="tags">#programming</p>
                                 <p class="tags">#beginners</p>
@@ -366,9 +368,9 @@
                                 </div>
                             </div>
                         </div>
-                    </div>
+                     </div>
 
-                    <div class="juniorDevSectionPadding">
+                     <div class="juniorDevSectionPadding">
                         <aside>
                             <div class="profileInfo">
                                 <img
@@ -390,9 +392,7 @@
                             </div>
                         </aside>
                         <div class="paddingOnDesktop">
-                            <h1 class="mainTitle">
-                                A guide to React Custom Hooks
-                            </h1>
+                            <h1 class="mainTitle">A guide to React Custom Hooks </h1>
                             <aside class="tagSection">
                                 <p class="tags">#react</p>
                                 <p class="tags">#hook</p>
@@ -438,9 +438,9 @@
                                 </div>
                             </div>
                         </div>
-                    </div>
-
-                    <div class="juniorDevSectionPadding">
+                     </div>
+                   
+                     <div class="juniorDevSectionPadding">
                         <aside>
                             <div class="profileInfo">
                                 <img
@@ -462,9 +462,7 @@
                             </div>
                         </aside>
                         <div class="paddingOnDesktop">
-                            <h1 class="mainTitle">
-                                Sam Altman: Corporate Collateral Damage?
-                            </h1>
+                            <h1 class="mainTitle"> Sam Altman: Corporate Collateral Damage?</h1>
                             <aside class="tagSection">
                                 <p class="tags">#discuss</p>
                                 <p class="tags">#ai</p>
@@ -508,9 +506,9 @@
                                 </div>
                             </div>
                         </div>
-                    </div>
+                     </div>
 
-                    <div class="juniorDevSectionPadding">
+                     <div class="juniorDevSectionPadding">
                         <aside>
                             <div class="profileInfo">
                                 <img
@@ -532,9 +530,7 @@
                             </div>
                         </aside>
                         <div class="paddingOnDesktop">
-                            <h1 class="mainTitle">
-                                Usando migrations com Golang
-                            </h1>
+                           <h1 class="mainTitle">Usando migrations com Golang</h1>
                             <aside class="tagSection">
                                 <p class="tags">#go</p>
                                 <p class="tags">#braziliandevs</p>
@@ -578,9 +574,9 @@
                                 </div>
                             </div>
                         </div>
-                    </div>
+                     </div>
 
-                    <div class="juniorDevSectionPadding">
+                     <div class="juniorDevSectionPadding">
                         <aside>
                             <div class="profileInfo">
                                 <img
@@ -602,9 +598,7 @@
                             </div>
                         </aside>
                         <div class="paddingOnDesktop">
-                            <h1 class="mainTitle">
-                                Bootcamps don't teach you this...
-                            </h1>
+                        <h1 class="mainTitle">Bootcamps don't teach you this...</h1>
                             <aside class="tagSection">
                                 <p class="tags">#a11y</p>
                                 <p class="tags">#webdev</p>
@@ -649,6 +643,8 @@
                             </div>
                         </div>
                     </div>
+      
+                
 
                     <!--Lalo section-->
                             <div class="cajaFlex">
@@ -1195,6 +1191,8 @@
                 </section>
             </div>
         </main>
+        <script src="jquery-3.7.1.min.js"></script>
+        <script src="albert.js"></script>
     </body>
     <script src="https://kit.fontawesome.com/acd114ba49.js" crossorigin="anonymous"></script>
 </html>
