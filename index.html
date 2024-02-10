@@ -32,7 +32,7 @@
           <img src="./assets/dev.png" class="logo" alt="logo"/>
           <div class="inputContainer">
             <input type="text" placeholder="Search..." class="inputNav"/>
-              <i class="fa-solid fa-magnifying-glass inputGlass" style="font-size: 20px"></i>
+              <i id="src" class="fa-solid fa-magnifying-glass inputGlass" style="font-size: 20px"></i>
           </div>
         </section>
         <section class="searchContainer">
@@ -174,146 +174,110 @@
 
         <section class="juniorCard"> <!-- SECCION CENTRAL -->
 
-        <section class="conteiner">
-          <div class="contenedorP">
-            <form  id="crudForm" class="crudForm">
-              <input type="text" id="titulo" name="titulo"class="titulo"  placeholder="agrega Título a tus ideas... ⭐" />
-              <textarea id="articulo" class="articulo" name="articulo" cols="30" rows="10" placeholder="¿En qué piensas? ⭐" ></textarea>
-              <button id="boton" class="boton" type="submit"> Enviar⭐ </button>
-            </form>
-          </div>
-          <div class="postCreado">
-            <table id="tabla" class="tabla">
-              <thead>
-                <tr>
-                <th class="headerTabla"> titulo </th>
-                <th class="headerTabla"> articulo </th>
-                </tr>
-              </thead>
-            <tbody id="bodyTabla" class="bodyTabla">
-            </tbody>
+          <section class="conteiner">
+            <div class="contenedorP"> <!-- la caja que crea los post -->
+              <form  id="crudForm" class="crudForm">
+                <input type="text" id="titulo" name="titulo"class="titulo"  placeholder="agrega Título a tus ideas... ⭐" />
+                <textarea id="articulo" class="articulo" name="articulo" cols="30" rows="10" placeholder="¿En qué piensas? ⭐" ></textarea>
+                <button id="boton" class="botoncito" type="submit"> Enviar⭐ </button>
+              </form>
             </div>
-          </table>
-        </section>
 
-        <div>
-          <div class="juniorDevSectionPadding">
-            <form method="POST">
-              <label for="title" class="postForms"></label>
-              <input type="text" id="titulo" name="titulo" placeholder="New post title here..." required/>
-              <label for="tags"  class="postForms">
-                <textarea id="tags" name="postTags" placeholder="Add up to 4 tags..."></textarea>
-              </label>
-              <label for="contenido" class="postForms"></label>
-              <textarea id="contenido" name="contenido" required placeholder="write stuff"></textarea>
-              <input type="submit" value="Publish" />
-            </form>
-          </div>
-        </div>
+            <!--Aquí se imprimen los post-->
+            <!-- <div class="postCreado"> 
+              <table id="tabla" class="tabla">
+                <thead>
+                  <tr>
+                    <th class="headerTabla"> </th>
+                    <th class="headerTabla"> </th>
+                  </tr>
+                </thead>
+                <tbody id="bodyTabla" class="bodyTabla">
+                </tbody>
+              </table>
+            </div> -->
+
+          </section>
+
+          <!-- <div>
+            <div class="juniorDevSectionPadding">
+              <form method="POST">
+                <label for="title" class="postForms"></label>
+                <input type="text" id="titulo" name="titulo" placeholder="New post title here..." required/>
+                <label for="tags"  class="postForms">
+                  <textarea id="tags" name="postTags" placeholder="Add up to 4 tags..."></textarea>
+                </label>
+                <label for="contenido" class="postForms"></label>
+                <textarea id="contenido" name="contenido" required placeholder="write stuff"></textarea>
+                <input type="submit" value="Publish" />
+              </form>
+            </div>
+          </div> -->
         
 
-        <div class="middleNav">
-          <a class="A" href="/"><strong>Relevant</strong></a> <!-- aquí debería ordenar por lo que nos de la gana -->
-          <a class="A" href="/">Latest </a> <!-- aquí debería ordenar por más nuevos -->
-          <a class="A" href="/">Top </a> <!-- aquí debería ordenar por más likes -->
-        </div>
-        
-        <div id="carouselExampleInterval" class="carousel slide" data-bs-ride="carousel"> <!-- EL CARRUSEL DE IMÁGENES COOL-->
-          <div class="carousel-inner">
-            <div class="carousel-item active" data-bs-interval="10000">
-              <img src="/assets/laurynas-me-vtYpRBPVIJ8-unsplash.jpg" class="d-block w-100" alt="img 1" >
-            </div>
-            <div class="carousel-item" data-bs-interval="2000">
-              <img src="/assets/cristina-gottardi-gWI_AubesEQ-unsplash.jpg" class="d-block w-100" alt="img 2">
-            </div>
-            <div class="carousel-item">
-              <img src="/assets/daniele-levis-pelusi-fh_PQtxDnLc-unsplash.jpg" class="d-block w-100" alt="img 3">
-            </div>
-            <div class="carousel-item">
-              <img src="/assets/marie-bellando-mitjans-mcpKljBkzEE-unsplash.jpg" class="d-block w-100" alt="img 4">
-            </div>
-            <div class="carousel-item">
-              <img src="/assets/mike-yukhtenko-a2kD4b0KK4s-unsplash.jpg" class="d-block w-100" alt="img 5">
-            </div>
-            <div class="carousel-item">
-              <img src="/assets/pang-yuhao-wCi28eq8TF4-unsplash.jpg" class="d-block w-100" alt="img 6">
-            </div>
-            <div class="carousel-item">
-              <img src="/assets/pawel-czerwinski-BP2RioglKXk-unsplash.jpg" class="d-block w-100" alt="img 7">
-            </div>
-            <div class="carousel-item">
-              <img src="/assets/soheb-zaidi-tgFR67JUcBs-unsplash.jpg" class="d-block w-100" alt="img 8">
-            </div>
-            <div class="carousel-item">
-              <img src="/assets/spencer-davis-ilQmlVIMN4c-unsplash.jpg" class="d-block w-100" alt="img 9">
-            </div>
+          <div class="middleNav">
+            <a class="A" href="/"><strong>Relevant</strong></a> <!-- aquí debería ordenar por lo que nos de la gana -->
+            <a class="A" href="/">Latest </a> <!-- aquí debería ordenar por más nuevos -->
+            <a class="A" href="/">Top </a> <!-- aquí debería ordenar por más likes -->
           </div>
-          <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleInterval" data-bs-slide="prev">
-            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-            <span class="visually-hidden">Previous</span>
-          </button>
-          <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleInterval" data-bs-slide="next">
-            <span class="carousel-control-next-icon" aria-hidden="true"></span>
-            <span class="visually-hidden">Next</span>
-          </button>
-        </div>
-
-        <div class="juniorDevSectionPadding" id="0"> <!-- esta es la primera caja... esto es lo que hay que replicar, con distintos valores-->
-          <aside>
-            <div class="profileInfo">
-              <img src="" id="insertIMG" class="profileImage" alt="profile picture of a guy smiling"/>
-              <div class="column">
-                <h3 style="font-size: 16px; color: rgb(64, 64, 64)">Mateusz Charytoniuk</h3>
-                <h4 class="profile-subtitle">Nov 15</h4>
+          
+          <div id="carouselExampleInterval" class="carousel slide" data-bs-ride="carousel"> <!-- EL CARRUSEL DE IMÁGENES COOL-->
+            <div class="carousel-inner">
+              <div class="carousel-item active" data-bs-interval="10000">
+                <img src="/assets/laurynas-me-vtYpRBPVIJ8-unsplash.jpg" class="d-block w-100" alt="img 1" >
+              </div>
+              <div class="carousel-item" data-bs-interval="2000">
+                <img src="/assets/cristina-gottardi-gWI_AubesEQ-unsplash.jpg" class="d-block w-100" alt="img 2">
+              </div>
+              <div class="carousel-item">
+                <img src="/assets/daniele-levis-pelusi-fh_PQtxDnLc-unsplash.jpg" class="d-block w-100" alt="img 3">
+              </div>
+              <div class="carousel-item">
+                <img src="/assets/marie-bellando-mitjans-mcpKljBkzEE-unsplash.jpg" class="d-block w-100" alt="img 4">
+              </div>
+              <div class="carousel-item">
+                <img src="/assets/mike-yukhtenko-a2kD4b0KK4s-unsplash.jpg" class="d-block w-100" alt="img 5">
+              </div>
+              <div class="carousel-item">
+                <img src="/assets/pang-yuhao-wCi28eq8TF4-unsplash.jpg" class="d-block w-100" alt="img 6">
+              </div>
+              <div class="carousel-item">
+                <img src="/assets/pawel-czerwinski-BP2RioglKXk-unsplash.jpg" class="d-block w-100" alt="img 7">
+              </div>
+              <div class="carousel-item">
+                <img src="/assets/soheb-zaidi-tgFR67JUcBs-unsplash.jpg" class="d-block w-100" alt="img 8">
+              </div>
+              <div class="carousel-item">
+                <img src="/assets/spencer-davis-ilQmlVIMN4c-unsplash.jpg" class="d-block w-100" alt="img 9">
               </div>
             </div>
-          </aside>
-          <div class="paddingOnDesktop">
-            <h1 class="mainTitle">To Junior Developers</h1>
-            <aside class="tagSection">
-              <p class="tags">#programming</p>
-              <p class="tags">#beginners</p>
-              <p class="tags">#career</p>
-              <p class="tags">#productivity</p>
-            </aside>
-            <div class="emoji-section">
-              <div class="setOfEmojis">
-                <p>💖</p>
-                <p>🦄</p>
-                <p>🤩</p>
-                <p>🙌</p>
-                <p>🔥</p>
-                <p class="emojiText">286</p>
-                <p class="emojiText showOnTabletOnly" style="margin-left: 5px">reactions</p>
-                <p class="emojiText" style="margin-left: 10px">💬 97</p>
-                <p class="emojiText showOnTabletOnly" style="margin-left: 10px">comments</p>
-              </div>
-              <div class="bookmarkSection">
-                4 min read
-                <img src="assets/bookmark.png" alt="bookmark icon" width="15px" height="15px"/>
-              </div>
-            </div>
+            <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleInterval" data-bs-slide="prev">
+              <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+              <span class="visually-hidden">Previous</span>
+            </button>
+            <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleInterval" data-bs-slide="next">
+              <span class="carousel-control-next-icon" aria-hidden="true"></span>
+              <span class="visually-hidden">Next</span>
+            </button>
           </div>
-        </div>
 
-<!--
-          <div class="juniorDevSectionPadding"> 
+          <div class="juniorDevSectionPadding" id="0"> <!-- esta es la primera caja... esto es lo que hay que replicar, con distintos valores-->
             <aside>
               <div class="profileInfo">
-                <img src="/assets/333862a1-0a15-479e-b0be-8e7da338b948.webp" class="profileImage" alt="profile picture of a guy smiling"/>
+                <img src="" id="insertIMG" class="profileImage" alt="profile picture of a guy smiling"/>
                 <div class="column">
-                  <h3 style="font-size: 16px; color: rgb(64, 64, 64)">Rasaf Ibrahim</h3>
-                  <h4 class="profile-subtitle">Nov 18</h4>
+                  <h3 style="font-size: 16px; color: rgb(64, 64, 64)">Mateusz Charytoniuk</h3>
+                  <h4 class="profile-subtitle">Nov 15</h4>
                 </div>
               </div>
             </aside>
             <div class="paddingOnDesktop">
-              <h1 class="mainTitle">A guide to React Custom Hooks</h1>
+              <h1 class="mainTitle">To Junior Developers</h1>
               <aside class="tagSection">
-                <p class="tags">#react</p>
-                <p class="tags">#hook</p>
-                <p class="tags">#javascript</p>
-                <p class="tags">#webdev</p>
+                <p class="tags">#programming</p>
+                <p class="tags">#beginners</p>
+                <p class="tags">#career</p>
+                <p class="tags">#productivity</p>
               </aside>
               <div class="emoji-section">
                 <div class="setOfEmojis">
@@ -322,148 +286,33 @@
                   <p>🤩</p>
                   <p>🙌</p>
                   <p>🔥</p>
-                  <p class="emojiText">26</p>
+                  <p class="emojiText">286</p>
                   <p class="emojiText showOnTabletOnly" style="margin-left: 5px">reactions</p>
-                  <p class="emojiText" style="margin-left: 10px">💬 2</p>
+                  <p class="emojiText" style="margin-left: 10px">💬 97</p>
                   <p class="emojiText showOnTabletOnly" style="margin-left: 10px">comments</p>
                 </div>
                 <div class="bookmarkSection">
-                  3 min read
-                  <img src="assets/bookmark.png" alt="bookmark icon" width="15px" height="15px"/>
-                </div>
-              </div>
-            </div>
-          </div> 
-
-
-          <div class="juniorDevSectionPadding"> 
-            <aside>
-              <div class="profileInfo">
-                <img src="/assets/9e63c9bc-4d9d-4638-b411-d0ec95dbb351.webp" class="profileImage" alt="profile picture of a guy smiling"/>
-                <div class="column">
-                  <h3 style="font-size: 16px; color: rgb(64, 64, 64)">Scofield Idehen</h3>
-                  <h4 class="profile-subtitle">Nov 19</h4>
-                </div>
-              </div>
-            </aside>
-            <div class="paddingOnDesktop">
-              <h1 class="mainTitle">Sam Altman: Corporate Collateral Damage?</h1>
-              <aside class="tagSection">
-                <p class="tags">#discuss</p>
-                <p class="tags">#ai</p>
-                <p class="tags">#openai</p>
-                <p class="tags">#deeplearning</p>
-              </aside>
-              <div class="emoji-section">
-                <div class="setOfEmojis">
-                  <p>💖</p>
-                  <p>🦄</p>
-                  <p>🤩</p>
-                  <p>🙌</p>
-                  <p>🔥</p>
-                  <p class="emojiText">5</p>
-                  <p class="emojiText showOnTabletOnly" style="margin-left: 5px">reactions</p>
-                  <p class="emojiText" style="margin-left: 10px">💬</p>
-                  <p class="emojiText showOnTabletOnly" style="margin-left: 10px"></p>
-                </div>
-                <div class="bookmarkSection">
-                  3 min read
+                  4 min read
                   <img src="assets/bookmark.png" alt="bookmark icon" width="15px" height="15px"/>
                 </div>
               </div>
             </div>
           </div>
 
-          <div class="juniorDevSectionPadding"> 
-            <aside>
-              <div class="profileInfo">
-                <img src="/assets/eca2026d-899d-42d6-b7a5-7eea107afbab.webp" class="profileImage" alt="profile picture of a guy smiling"/>
-                <div class="column">
-                  <h3 style="font-size: 16px; color: rgb(64, 64, 64)">William V. Joaquim</h3>
-                  <h4 class="profile-subtitle">Nov 18</h4>
-                </div>
-              </div>
-            </aside>
-            <div class="paddingOnDesktop">
-              <h1 class="mainTitle">Usando migrations com Golang</h1>
-              <aside class="tagSection">
-                <p class="tags">#go</p>
-                <p class="tags">#braziliandevs</p>
-                <p class="tags">#sql</p>
-                <p class="tags">#beginners</p>
-              </aside>
-
-              <div class="emoji-section">
-                <div class="setOfEmojis">
-                  <p>💖</p>
-                  <p>🦄</p>
-                  <p>🤩</p>
-                  <p>🙌</p>
-                  <p>🔥</p>
-                  <p class="emojiText">7</p>
-                  <p
-                    class="emojiText showOnTabletOnly"
-                    style="margin-left: 5px"
-                  >
-                    reactions
-                  </p>
-                  <p class="emojiText" style="margin-left: 10px">💬</p>
-                  <p
-                    class="emojiText showOnTabletOnly"
-                    style="margin-left: 10px"
-                  ></p>
-                </div>
-                <div class="bookmarkSection">
-                  5 min read
-                  <img
-                    src="assets/bookmark.png"
-                    alt="bookmark icon"
-                    width="15px"
-                    height="15px"
-                  />
-                </div>
-              </div>
-            </div>
+          <div class="postCreado"> <!--Aquí se imprimen los post-->
+            <table id="tabla" class="tabla">
+              <thead>
+                <tr>
+                  <th class="headerTabla"> </th>
+                  <th class="headerTabla"> </th>
+                </tr>
+              </thead>
+              <tbody id="bodyTabla" class="bodyTabla">
+              </tbody>
+            </table>
           </div>
 
-          <div class="juniorDevSectionPadding"> 
-            <aside>
-              <div class="profileInfo">
-                <img src="/assets/f0514090-260b-4a34-89b0-a2b6e922d5ec.webp" class="profileImage" alt="profile picture of a guy smiling"/>
-                <div class="column">
-                  <h3 style="font-size: 16px; color: rgb(64, 64, 64)">GrahamTheDev</h3>
-                  <h4 class="profile-subtitle">Nov 20</h4>
-                </div>
-              </div>
-            </aside>
-            <div class="paddingOnDesktop">
-              <h1 class="mainTitle">Bootcamps don't teach you this...</h1>
-              <aside class="tagSection">
-                <p class="tags">#a11y</p>
-                <p class="tags">#webdev</p>
-                <p class="tags">#programming</p>
-                <p class="tags">#beginners</p>
-              </aside>
-              <div class="emoji-section">
-                <div class="setOfEmojis">
-                  <p>💖</p>
-                  <p>🦄</p>
-                  <p>🤩</p>
-                  <p>🙌</p>
-                  <p>🔥</p>
-                  <p class="emojiText">13</p>
-                  <p class="emojiText showOnTabletOnly" style="margin-left: 5px">reactions</p>
-                  <p class="emojiText" style="margin-left: 10px">💬</p>
-                  <p class="emojiText showOnTabletOnly" style="margin-left: 10px"></p>
-                </div>
-                <div class="bookmarkSection">
-                  5 min read
-                  <img src="assets/bookmark.png" alt="bookmark icon" width="15px" height="15px"/>
-                </div>
-              </div>
-            </div>
-          </div>
--->
+        
 
           <!-- las cajas de post nuevos se deberían crear, en teoria, AQUI-->
 

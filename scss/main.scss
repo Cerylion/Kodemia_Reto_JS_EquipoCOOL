@@ -1,6 +1,7 @@
 @use "sideCard";
 @use 'to-junior-dev';
 @use 'weekly';
+@use 'conteiner';
 /*
 
 */
@@ -76,6 +77,9 @@ body {
     align-items: center;
     justify-content: center;
     .mainContainer {
+      box-sizing: border-box;
+      max-width: 1180px;
+
       .asideLeft {
         width: 232px;
         margin: 10px;
@@ -165,6 +169,10 @@ body {
   }
 }
 
+.filter {
+  display: none;
+}
+
 h1, h2, h3, h4 {
   margin: 0;
 }
@@ -239,8 +247,7 @@ input[type='submit'] {
 /* not part of the navbar don't touch */
 
 .mainContainer {
-  box-sizing: border-box;
-  max-width: 1280px;
+  
   @media (min-width: 768px) {
     display: grid;
     grid-template-columns: 232px minmax(480px, 2fr);
