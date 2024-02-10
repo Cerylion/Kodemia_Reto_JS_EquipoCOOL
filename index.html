@@ -5,10 +5,19 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="stylesheet" href="./css/style.css" />
+    <link rel="stylesheet" href="/css/main.css" />
     <link rel="stylesheet" href="./css/to-junior-dev.css" />
     <link rel="stylesheet" href="./css/sideCard.css" />
     <link rel="stylesheet" href="./css/weekly.css" />
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
+
+    <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png"> 
+    <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
+    <link rel="manifest" href="/site.webmanifest">
+    <link rel="mask-icon" href="/safari-pinned-tab.svg" color="#5bbad5">
+    <meta name="msapplication-TileColor" content="#da532c">
+    <meta name="theme-color" content="#ffffff">
 
     <title>Reto JavaScript Equipo COOL</title>
   </head>
@@ -163,16 +172,90 @@
 
         <section class="juniorCard"> <!-- SECCION CENTRAL -->
 
-          <!--  
-          AQUI DEBE IR LA CAJA DE CREAR LOS POST
-        -->
+        <section class="conteiner">
+          <div class="contenedorP">
+            <form  id="crudForm" class="crudForm">
+              <input type="text" id="titulo" name="titulo"class="titulo"  placeholder="agrega Título a tus ideas... ⭐" />
+              <textarea id="articulo" class="articulo" name="articulo" cols="30" rows="10" placeholder="¿En qué piensas? ⭐" ></textarea>
+              <button id="boton" class="boton" type="submit"> Enviar⭐ </button>
+            </form>
+          </div>
+          <div class="postCreado">
+            <table id="tabla" class="tabla">
+              <thead>
+                <tr>
+                <th class="headerTabla"> titulo </th>
+                <th class="headerTabla"> articulo </th>
+                </tr>
+              </thead>
+            <tbody id="bodyTabla" class="bodyTabla">
+            </tbody>
+            </div>
+          </table>
+        </section>
+
+        <div>          
+          <div class="juniorDevSectionPadding">
+            <form method="POST">
+              <label for="title" class="postForms"></label>
+              <input type="text" id="titulo" name="titulo" placeholder="New post title here..." required/>
+              <label for="tags"  class="postForms">
+                <textarea id="tags" name="postTags" placeholder="Add up to 4 tags..."></textarea>
+              </label>
+              <label for="contenido" class="postForms"></label>
+              <textarea id="contenido" name="contenido" required placeholder="write stuff"></textarea>
+              <input type="submit" value="Publish" />
+            </form>
+          </div>
+        </div>
+        
 
           <div class="middleNav">
-            <a href="/"><strong>Relevant</strong></a> <!-- aquí debería ordenar por lo que nos de la gana -->
-            <a href="/">Latest </a> <!-- aquí debería ordenar por más nuevos -->
-            <a href="/">Top </a> <!-- aquí debería ordenar por más likes -->
+            <a class="A" href="/"><strong>Relevant</strong></a> <!-- aquí debería ordenar por lo que nos de la gana -->
+            <a class="A" href="/">Latest </a> <!-- aquí debería ordenar por más nuevos -->
+            <a class="A" href="/">Top </a> <!-- aquí debería ordenar por más likes -->
           </div>
-          <img src="/assets/red_horizon.jpg" class="fullWidth" alt="red mountains at the horizon"/>
+          
+          <div id="carouselExampleInterval" class="carousel slide" data-bs-ride="carousel"> <!-- EL CARRUSEL DE IMÁGENES COOL-->
+            <div class="carousel-inner">
+              <div class="carousel-item active" data-bs-interval="10000">
+                <img src="/assets/laurynas-me-vtYpRBPVIJ8-unsplash.jpg" class="d-block w-100" alt="img 1" >
+              </div>
+              <div class="carousel-item" data-bs-interval="2000">
+                <img src="/assets/cristina-gottardi-gWI_AubesEQ-unsplash.jpg" class="d-block w-100" alt="img 2">
+              </div>
+              <div class="carousel-item">
+                <img src="/assets/daniele-levis-pelusi-fh_PQtxDnLc-unsplash.jpg" class="d-block w-100" alt="img 3">
+              </div>
+              <div class="carousel-item">
+                <img src="/assets/marie-bellando-mitjans-mcpKljBkzEE-unsplash.jpg" class="d-block w-100" alt="img 4">
+              </div>
+              <div class="carousel-item">
+                <img src="/assets/mike-yukhtenko-a2kD4b0KK4s-unsplash.jpg" class="d-block w-100" alt="img 5">
+              </div>
+              <div class="carousel-item">
+                <img src="/assets/pang-yuhao-wCi28eq8TF4-unsplash.jpg" class="d-block w-100" alt="img 6">
+              </div>
+              <div class="carousel-item">
+                <img src="/assets/pawel-czerwinski-BP2RioglKXk-unsplash.jpg" class="d-block w-100" alt="img 7">
+              </div>
+              <div class="carousel-item">
+                <img src="/assets/soheb-zaidi-tgFR67JUcBs-unsplash.jpg" class="d-block w-100" alt="img 8">
+              </div>
+              <div class="carousel-item">
+                <img src="/assets/spencer-davis-ilQmlVIMN4c-unsplash.jpg" class="d-block w-100" alt="img 9">
+              </div>
+            </div>
+            <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleInterval" data-bs-slide="prev">
+              <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+              <span class="visually-hidden">Previous</span>
+            </button>
+            <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleInterval" data-bs-slide="next">
+              <span class="carousel-control-next-icon" aria-hidden="true"></span>
+              <span class="visually-hidden">Next</span>
+            </button>
+          </div>
+
           <div class="juniorDevSectionPadding"> <!-- esta es la primera caja... esto es lo que hay que replicar, con distintos valores-->
             <aside>
               <div class="profileInfo">
@@ -191,7 +274,6 @@
                 <p class="tags">#career</p>
                 <p class="tags">#productivity</p>
               </aside>
-
               <div class="emoji-section">
                 <div class="setOfEmojis">
                   <p>💖</p>
@@ -212,7 +294,8 @@
             </div>
           </div>
 
-          <div class="juniorDevSectionPadding"> <!-- segunda caja -->
+<!--
+          <div class="juniorDevSectionPadding"> 
             <aside>
               <div class="profileInfo">
                 <img src="/assets/333862a1-0a15-479e-b0be-8e7da338b948.webp" class="profileImage" alt="profile picture of a guy smiling"/>
@@ -248,9 +331,10 @@
                 </div>
               </div>
             </div>
-          </div>
+          </div> 
 
-          <div class="juniorDevSectionPadding"> <!-- tercera caja -->
+
+          <div class="juniorDevSectionPadding"> 
             <aside>
               <div class="profileInfo">
                 <img src="/assets/9e63c9bc-4d9d-4638-b411-d0ec95dbb351.webp" class="profileImage" alt="profile picture of a guy smiling"/>
@@ -288,7 +372,7 @@
             </div>
           </div>
 
-          <div class="juniorDevSectionPadding"> <!-- cuarta caja -->
+          <div class="juniorDevSectionPadding"> 
             <aside>
               <div class="profileInfo">
                 <img src="/assets/eca2026d-899d-42d6-b7a5-7eea107afbab.webp" class="profileImage" alt="profile picture of a guy smiling"/>
@@ -340,7 +424,7 @@
             </div>
           </div>
 
-          <div class="juniorDevSectionPadding"> <!-- quinta caja -->
+          <div class="juniorDevSectionPadding"> 
             <aside>
               <div class="profileInfo">
                 <img src="/assets/f0514090-260b-4a34-89b0-a2b6e922d5ec.webp" class="profileImage" alt="profile picture of a guy smiling"/>
@@ -377,7 +461,7 @@
               </div>
             </div>
           </div>
-
+-->
 
           <!-- las cajas de post nuevos se deberían crear, en teoria, AQUI-->
 
@@ -749,8 +833,6 @@
       </div>
     </main>
   </body>
-  <script
-    src="https://kit.fontawesome.com/acd114ba49.js"
-    crossorigin="anonymous"
-  ></script>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL" crossorigin="anonymous"></script>
+  <script src="https://kit.fontawesome.com/acd114ba49.js" crossorigin="anonymous"></script>
 </html>
