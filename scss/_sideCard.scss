@@ -1,13 +1,13 @@
-@charset "UTF-8";
 .sideCardContainer {
   display: none;
 }
 
 @media only screen and (min-width: 1024px) {
   .sideCardContainer {
-    display: block; /* Oculta el elemento en dispositivos con un ancho de pantalla de 767 píxeles o menos (por ejemplo, tabletas y móviles) */
+      display: block; /* Oculta el elemento en dispositivos con un ancho de pantalla de 767 píxeles o menos (por ejemplo, tabletas y móviles) */
   }
 }
+
 .sideCard {
   min-width: 230px;
   max-width: 325px;
@@ -63,7 +63,6 @@
   text-decoration: none;
   color: black;
 }
-
 .linkAndCommentSection a:hover {
   color: blue;
 }
@@ -141,19 +140,16 @@
   scrollbar-base-color: transparent;
   padding: 8px 16px;
   margin-bottom: 25px;
-}
-@media (min-width: 780px) {
-  .popular {
-    padding: 8px 0;
+
+  @media (min-width: 780px) {
+      padding: 8px 0;
   }
 }
-
 .popularTags h2 {
   padding: 8px 16px;
-}
-@media (min-width: 780px) {
-  .popularTags h2 {
-    padding: 8px 0;
+
+  @media (min-width: 780px) {
+      padding: 8px 0;
   }
 }
 
@@ -181,4 +177,4 @@ strong:hover {
 
 .box1 a {
   text-decoration: none;
-}/*# sourceMappingURL=sideCard.css.map */
+}

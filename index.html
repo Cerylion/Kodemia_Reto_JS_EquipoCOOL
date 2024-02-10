@@ -6,9 +6,8 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="stylesheet" href="/css/main.css" />
-    <link rel="stylesheet" href="./css/to-junior-dev.css" />
-    <link rel="stylesheet" href="./css/sideCard.css" />
-    <link rel="stylesheet" href="./css/weekly.css" />
+    
+    
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
 
     <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png"> 
@@ -18,6 +17,8 @@
     <link rel="mask-icon" href="/safari-pinned-tab.svg" color="#5bbad5">
     <meta name="msapplication-TileColor" content="#da532c">
     <meta name="theme-color" content="#ffffff">
+
+    <script src="/loscodigoscool.js"> </script>
 
     <title>Reto JavaScript Equipo COOL</title>
   </head>
@@ -41,10 +42,11 @@
           <div class="logInHeader">
             <a href="/">Log in</a>
           </div>
-          <a href="/" id="createAccountHeader">Create account</a>
+          <a href="/" class="createAccountHeader">Create account</a>
         </section>
       </div>
     </header>
+
     <main>
       <div class="mainContainer">
         
@@ -57,8 +59,8 @@
               We&#39;re a place where coders share, stay up-to-date and grow their careers.
             </p>
             <div class="logInButtons">
-              <a href="/" id="createAccountBtn">Create account</a>
-              <a href="/" id="logInAside">Log In</a>
+              <a href="/" class="A" id="createAccountBtn">Create account</a>
+              <a href="/" class="A" id="logInAside">Log In</a>
             </div>
           </section>
           <nav class="asideNav">
@@ -194,7 +196,7 @@
           </table>
         </section>
 
-        <div>          
+        <div>
           <div class="juniorDevSectionPadding">
             <form method="POST">
               <label for="title" class="postForms"></label>
@@ -210,89 +212,89 @@
         </div>
         
 
-          <div class="middleNav">
-            <a class="A" href="/"><strong>Relevant</strong></a> <!-- aquí debería ordenar por lo que nos de la gana -->
-            <a class="A" href="/">Latest </a> <!-- aquí debería ordenar por más nuevos -->
-            <a class="A" href="/">Top </a> <!-- aquí debería ordenar por más likes -->
-          </div>
-          
-          <div id="carouselExampleInterval" class="carousel slide" data-bs-ride="carousel"> <!-- EL CARRUSEL DE IMÁGENES COOL-->
-            <div class="carousel-inner">
-              <div class="carousel-item active" data-bs-interval="10000">
-                <img src="/assets/laurynas-me-vtYpRBPVIJ8-unsplash.jpg" class="d-block w-100" alt="img 1" >
-              </div>
-              <div class="carousel-item" data-bs-interval="2000">
-                <img src="/assets/cristina-gottardi-gWI_AubesEQ-unsplash.jpg" class="d-block w-100" alt="img 2">
-              </div>
-              <div class="carousel-item">
-                <img src="/assets/daniele-levis-pelusi-fh_PQtxDnLc-unsplash.jpg" class="d-block w-100" alt="img 3">
-              </div>
-              <div class="carousel-item">
-                <img src="/assets/marie-bellando-mitjans-mcpKljBkzEE-unsplash.jpg" class="d-block w-100" alt="img 4">
-              </div>
-              <div class="carousel-item">
-                <img src="/assets/mike-yukhtenko-a2kD4b0KK4s-unsplash.jpg" class="d-block w-100" alt="img 5">
-              </div>
-              <div class="carousel-item">
-                <img src="/assets/pang-yuhao-wCi28eq8TF4-unsplash.jpg" class="d-block w-100" alt="img 6">
-              </div>
-              <div class="carousel-item">
-                <img src="/assets/pawel-czerwinski-BP2RioglKXk-unsplash.jpg" class="d-block w-100" alt="img 7">
-              </div>
-              <div class="carousel-item">
-                <img src="/assets/soheb-zaidi-tgFR67JUcBs-unsplash.jpg" class="d-block w-100" alt="img 8">
-              </div>
-              <div class="carousel-item">
-                <img src="/assets/spencer-davis-ilQmlVIMN4c-unsplash.jpg" class="d-block w-100" alt="img 9">
-              </div>
+        <div class="middleNav">
+          <a class="A" href="/"><strong>Relevant</strong></a> <!-- aquí debería ordenar por lo que nos de la gana -->
+          <a class="A" href="/">Latest </a> <!-- aquí debería ordenar por más nuevos -->
+          <a class="A" href="/">Top </a> <!-- aquí debería ordenar por más likes -->
+        </div>
+        
+        <div id="carouselExampleInterval" class="carousel slide" data-bs-ride="carousel"> <!-- EL CARRUSEL DE IMÁGENES COOL-->
+          <div class="carousel-inner">
+            <div class="carousel-item active" data-bs-interval="10000">
+              <img src="/assets/laurynas-me-vtYpRBPVIJ8-unsplash.jpg" class="d-block w-100" alt="img 1" >
             </div>
-            <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleInterval" data-bs-slide="prev">
-              <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-              <span class="visually-hidden">Previous</span>
-            </button>
-            <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleInterval" data-bs-slide="next">
-              <span class="carousel-control-next-icon" aria-hidden="true"></span>
-              <span class="visually-hidden">Next</span>
-            </button>
+            <div class="carousel-item" data-bs-interval="2000">
+              <img src="/assets/cristina-gottardi-gWI_AubesEQ-unsplash.jpg" class="d-block w-100" alt="img 2">
+            </div>
+            <div class="carousel-item">
+              <img src="/assets/daniele-levis-pelusi-fh_PQtxDnLc-unsplash.jpg" class="d-block w-100" alt="img 3">
+            </div>
+            <div class="carousel-item">
+              <img src="/assets/marie-bellando-mitjans-mcpKljBkzEE-unsplash.jpg" class="d-block w-100" alt="img 4">
+            </div>
+            <div class="carousel-item">
+              <img src="/assets/mike-yukhtenko-a2kD4b0KK4s-unsplash.jpg" class="d-block w-100" alt="img 5">
+            </div>
+            <div class="carousel-item">
+              <img src="/assets/pang-yuhao-wCi28eq8TF4-unsplash.jpg" class="d-block w-100" alt="img 6">
+            </div>
+            <div class="carousel-item">
+              <img src="/assets/pawel-czerwinski-BP2RioglKXk-unsplash.jpg" class="d-block w-100" alt="img 7">
+            </div>
+            <div class="carousel-item">
+              <img src="/assets/soheb-zaidi-tgFR67JUcBs-unsplash.jpg" class="d-block w-100" alt="img 8">
+            </div>
+            <div class="carousel-item">
+              <img src="/assets/spencer-davis-ilQmlVIMN4c-unsplash.jpg" class="d-block w-100" alt="img 9">
+            </div>
           </div>
+          <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleInterval" data-bs-slide="prev">
+            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+            <span class="visually-hidden">Previous</span>
+          </button>
+          <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleInterval" data-bs-slide="next">
+            <span class="carousel-control-next-icon" aria-hidden="true"></span>
+            <span class="visually-hidden">Next</span>
+          </button>
+        </div>
 
-          <div class="juniorDevSectionPadding"> <!-- esta es la primera caja... esto es lo que hay que replicar, con distintos valores-->
-            <aside>
-              <div class="profileInfo">
-                <img src="/assets/rounded-profile.png" class="profileImage" alt="profile picture of a guy smiling"/>
-                <div class="column">
-                  <h3 style="font-size: 16px; color: rgb(64, 64, 64)">Mateusz Charytoniuk</h3>
-                  <h4 class="profile-subtitle">Nov 15</h4>
-                </div>
+        <div class="juniorDevSectionPadding" id="0"> <!-- esta es la primera caja... esto es lo que hay que replicar, con distintos valores-->
+          <aside>
+            <div class="profileInfo">
+              <img src="" id="insertIMG" class="profileImage" alt="profile picture of a guy smiling"/>
+              <div class="column">
+                <h3 style="font-size: 16px; color: rgb(64, 64, 64)">Mateusz Charytoniuk</h3>
+                <h4 class="profile-subtitle">Nov 15</h4>
               </div>
+            </div>
+          </aside>
+          <div class="paddingOnDesktop">
+            <h1 class="mainTitle">To Junior Developers</h1>
+            <aside class="tagSection">
+              <p class="tags">#programming</p>
+              <p class="tags">#beginners</p>
+              <p class="tags">#career</p>
+              <p class="tags">#productivity</p>
             </aside>
-            <div class="paddingOnDesktop">
-              <h1 class="mainTitle">To Junior Developers</h1>
-              <aside class="tagSection">
-                <p class="tags">#programming</p>
-                <p class="tags">#beginners</p>
-                <p class="tags">#career</p>
-                <p class="tags">#productivity</p>
-              </aside>
-              <div class="emoji-section">
-                <div class="setOfEmojis">
-                  <p>💖</p>
-                  <p>🦄</p>
-                  <p>🤩</p>
-                  <p>🙌</p>
-                  <p>🔥</p>
-                  <p class="emojiText">286</p>
-                  <p class="emojiText showOnTabletOnly" style="margin-left: 5px">reactions</p>
-                  <p class="emojiText" style="margin-left: 10px">💬 97</p>
-                  <p class="emojiText showOnTabletOnly" style="margin-left: 10px">comments</p>
-                </div>
-                <div class="bookmarkSection">
-                  4 min read
-                  <img src="assets/bookmark.png" alt="bookmark icon" width="15px" height="15px"/>
-                </div>
+            <div class="emoji-section">
+              <div class="setOfEmojis">
+                <p>💖</p>
+                <p>🦄</p>
+                <p>🤩</p>
+                <p>🙌</p>
+                <p>🔥</p>
+                <p class="emojiText">286</p>
+                <p class="emojiText showOnTabletOnly" style="margin-left: 5px">reactions</p>
+                <p class="emojiText" style="margin-left: 10px">💬 97</p>
+                <p class="emojiText showOnTabletOnly" style="margin-left: 10px">comments</p>
+              </div>
+              <div class="bookmarkSection">
+                4 min read
+                <img src="assets/bookmark.png" alt="bookmark icon" width="15px" height="15px"/>
               </div>
             </div>
           </div>
+        </div>
 
 <!--
           <div class="juniorDevSectionPadding"> 
