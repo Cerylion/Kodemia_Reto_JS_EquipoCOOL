@@ -75,10 +75,14 @@ document.addEventListener('DOMContentLoaded', () => {
       const divImagen = document.createElement('div')
       divImagen.className = 'imagenDeUsuario'
       const creaImagen = document.createElement('img')
-      creaImagen.className = 'imagenUsuario'
+      creaImagen.className = 'profileImage'
       creaImagen.type = 'img'
+      creaImagen.id = 'insertIMG'
       bodyTabla.appendChild(divImagen)
       divImagen.appendChild(creaImagen)
+      // creaImagen.src = 
+
+
 
       //nombre
       const divNombre = document.createElement('div')
@@ -220,6 +224,8 @@ document.addEventListener('DOMContentLoaded', () => {
 
   generarTabla()
 
+
+  /* este es el buscador */
   const d = document
   function searchFilters(input, selector) {
     d.addEventListener('keyup', (e) => {
@@ -230,13 +236,10 @@ document.addEventListener('DOMContentLoaded', () => {
         d.querySelectorAll(selector).forEach((el) => {
           el.textContent.toLowerCase().includes(e.target.value.toLowerCase())
             ? el.classList.remove('filter')
-            : el.classList.add('filter')
-          /* if (el.classList.contains('filter')) {el.style.display = 'none'}
-          else  el.style.display = 'grid' */
+            : el.classList.add('filter')          
         })
       }
     })
   }
-
   searchFilters('.inputNav', '.contenedorPost')
 })
