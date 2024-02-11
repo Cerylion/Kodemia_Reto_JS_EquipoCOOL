@@ -1,4 +1,5 @@
 document.addEventListener('DOMContentLoaded', () => {
+  let imagenCampeon = localStorage.getItem('imagenCampeon');
   async function obtenerImagenAzar(campeon) {
     try {
       const respuesta = await fetch(
@@ -21,20 +22,7 @@ document.addEventListener('DOMContentLoaded', () => {
     }
   }
 
-  async function mostrarImagen() {
-    const imagenURL = await obtenerImagenAzar('Kled')
-    if (imagenURL) {
-      const imagen = document.createElement('img')
-      imagen.src = imagenURL
-      //imagen.className = 'profileImage' esto le agrega la clase a la imagen
-      document.getElementById('insertIMG').src = imagenURL // esto es lo que mete la imagen dentro del cuadrito - no se puede hacer con la clase
-      //document.body.appendChild(imagen) esto mete la imagen al final del doc
-    } else {
-      console.log('No se pudo obtener la imagen.')
-    }
-  }
-
-  mostrarImagen()
+  
 
   // la magia de los post
 
@@ -63,26 +51,48 @@ document.addEventListener('DOMContentLoaded', () => {
     localStorage.setItem('formData', JSON.stringify(data))
   }
 
-  function generarTabla() {
+  async function generarTabla() {
     bodyTabla.innerHTML = ''
-
-    data.forEach(function (item, index) {
-      //gran contenedor//
-
+  
+    for (let index = 0; index < data.length; index++) {
+      const item = data[index];
       const divGranContenedor = document.createElement('div')
-      //imagen
       divGranContenedor.className = 'juniorDevSectionPadding'
+  
+      // Mostrar imagen
       const divImagen = document.createElement('div')
       divImagen.className = 'imagenDeUsuario'
       const creaImagen = document.createElement('img')
       creaImagen.className = 'profileImage'
       creaImagen.type = 'img'
-      creaImagen.id = 'insertIMG'
+  
+      // Obtener imagen al azar y asignarla a la variable imagenCampeon y a la propiedad src de creaImagen
+      imagenCampeon = await obtenerImagenAzar('Yuumi');
+      creaImagen.src = imagenCampeon;
+  
       bodyTabla.appendChild(divImagen)
       divImagen.appendChild(creaImagen)
       // creaImagen.src = 
 
-
+      async function mostrarImagen() {
+        if (!imagenCampeon) {
+          const imagenURL = await obtenerImagenAzar('Yuumi')
+          if (imagenURL) {
+            imagenCampeon = imagenURL; 
+            localStorage.setItem('imagenCampeon', imagenCampeon); 
+            document.getElementById('insertIMG').src = imagenCampeon; 
+          } else {
+            console.log('No se pudo obtener la imagen.')
+          }
+        } else {
+          
+          document.getElementById('insertIMG').src = imagenCampeon;
+        }
+        const imagenElement = document.getElementById('imagenCampeon');
+          imagenElement.src = imagenCampeon;
+      }
+    
+      mostrarImagen()
 
       //nombre
       const divNombre = document.createElement('div')
@@ -204,8 +214,7 @@ document.addEventListener('DOMContentLoaded', () => {
       fila.appendChild(contenedorReaccionesMas)
 
       bodyTabla.appendChild(fila)
-    })
-  }
+    }}
 
   function editInfo(index) {
     const item = data[index]
