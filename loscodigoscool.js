@@ -77,12 +77,24 @@ document.addEventListener('DOMContentLoaded', () => {
       const creaImagen = document.createElement('img')
       creaImagen.className = 'profileImage'
       creaImagen.type = 'img'
-      creaImagen.id = 'insertIMG'
+
       bodyTabla.appendChild(divImagen)
       divImagen.appendChild(creaImagen)
-      // creaImagen.src = 
+      // creaImagen.src =
 
-
+      /*  async function mostrarImagen() {
+        const imagenURL = await obtenerImagenAzar('Kled')
+        if (imagenURL) {
+          const imagen = document.createElement('img')
+          imagen.src = imagenURL
+          //imagen.className = 'profileImage' esto le agrega la clase a la imagen
+          document.getElementById('insertIMG2').src = imagenURL // esto es lo que mete la imagen dentro del cuadrito - no se puede hacer con la clase
+          //document.body.appendChild(imagen) esto mete la imagen al final del doc
+        } else {
+          console.log('No se pudo obtener la imagen.')
+        }
+      }
+      mostrarImagen () */
 
       //nombre
       const divNombre = document.createElement('div')
@@ -224,7 +236,6 @@ document.addEventListener('DOMContentLoaded', () => {
 
   generarTabla()
 
-
   /* este es el buscador */
   const d = document
   function searchFilters(input, selector) {
@@ -236,10 +247,39 @@ document.addEventListener('DOMContentLoaded', () => {
         d.querySelectorAll(selector).forEach((el) => {
           el.textContent.toLowerCase().includes(e.target.value.toLowerCase())
             ? el.classList.remove('filter')
-            : el.classList.add('filter')          
+            : el.classList.add('filter')
         })
       }
     })
   }
   searchFilters('.inputNav', '.contenedorPost')
+  const BTNM = document.getElementsByClassName('btnM')
+  const BTNO = document.querySelectorAll('btnO')
+  console.log(BTNM, BTNO)
+  
+  const mostrar = () => {
+    const list = document.querySelector('.ulu')
+    console.log(list)
+    list.style.visibility = 'visible'
+  }
+  const ocultar = () => {
+    const list = document.querySelector('.ulu')
+    list.style.visibility = 'hidden'
+  }
+  BTNM.onclick = mostrar()
+  BTNO.onclick = ocultar()
 })
+
+/*
+function mostrar(){
+  let list = document.querySelector(".ul")
+  
+  list.style.visibility="visible"
+}
+
+function ocultar(){
+  let list = document.querySelector(".ul")
+
+  list.style.visibility="hidden"
+}
+*/

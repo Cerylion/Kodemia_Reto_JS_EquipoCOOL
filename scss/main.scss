@@ -214,14 +214,30 @@ h1, h2, h3, h4 {
   align-items: center;
   gap: 10px;
   margin-left: 10px;
-  a {
+  .btn{
     text-decoration: none;
     color: #575757;
     padding: 8px 12px;
+    border: 0px;
     &:hover {
       background-color: #fff;
       color: #3b49df;
       border-radius: 8px;
+    }
+  }
+  .contenedorTop{
+    display:flex;
+    justify-content: space-around;
+    .ulu{
+      display:flex;
+      width: 100px;
+      padding:4px;
+      margin-left:130px;
+      list-style: none;
+      justify-content: space-around;
+      position: absolute;
+      visibility: hidden;
+      left: 700px;
     }
   }
 }

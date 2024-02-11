@@ -177,7 +177,9 @@
           <section class="conteiner">
             <div class="contenedorP"> <!-- la caja que crea los post -->
               <form  id="crudForm" class="crudForm">
-                <input type="text" id="titulo" name="titulo"class="titulo"  placeholder="agrega Título a tus ideas... ⭐" />
+                <input type="text" placeholder="Autor...">
+                <input type="date" >
+                <input type="text" id="titulo" name="titulo"class="titulo" placeholder="agrega Título a tus ideas... ⭐" />
                 <textarea id="articulo" class="articulo" name="articulo" cols="30" rows="10" placeholder="¿En qué piensas? ⭐" ></textarea>
                 <button id="boton" class="botoncito" type="submit"> Enviar⭐ </button>
               </form>
@@ -213,13 +215,20 @@
               </form>
             </div>
           </div> -->
-        
 
           <div class="middleNav">
-            <a class="A" href="/"><strong>Relevant</strong></a> <!-- aquí debería ordenar por lo que nos de la gana -->
-            <a class="A" href="/">Latest </a> <!-- aquí debería ordenar por más nuevos -->
-            <a class="A" href="/">Top </a> <!-- aquí debería ordenar por más likes -->
-          </div>
+            <button  class="btn btnO"><strong>Relevant</strong></button><!-- aquí debería ordenar por lo que nos de la gana -->
+              <button  class="btn btnO">Latest</button><!-- aquí debería ordenar por más nuevos -->
+              <div class="contenedorTop">
+                <button class="btn" id="btnM">Top</button><!-- aquí debería ordenar por más likes -->
+                  <ul class="ulu">
+                  <li class="li" style="margin-right: 10px;"><button class="btn"><strong>Week</strong></button></li>
+                  <li class="li" style="margin-right: 10px;"><button class="btn">Month</button></li>
+                  <li class="li" style="margin-right: 10px;"><button class="btn">Year</button></li>
+                  <li class="li" style="margin-right: 10px;"><button class="btn">Infinity</button></li>
+                </ul>
+            </div>
+            </div>
           
           <div id="carouselExampleInterval" class="carousel slide" data-bs-ride="carousel"> <!-- EL CARRUSEL DE IMÁGENES COOL-->
             <div class="carousel-inner">
