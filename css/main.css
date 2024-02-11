@@ -541,7 +541,7 @@ img.fullWidth {
 }
 
 .nombreUsuario {
-  grid-column: 1/-1;
+  grid-column: -1/-1;
   justify-items: left;
   font-size: 15px;
 }
@@ -799,15 +799,31 @@ h1, h2, h3, h4 {
   gap: 10px;
   margin-left: 10px;
 }
-.middleNav a {
+.middleNav .btn {
   text-decoration: none;
   color: #575757;
   padding: 8px 12px;
+  border: 0px;
 }
-.middleNav a:hover {
+.middleNav .btn:hover {
   background-color: #fff;
   color: #3b49df;
   border-radius: 8px;
+}
+.middleNav .contenedorTop {
+  display: flex;
+  justify-content: space-around;
+}
+.middleNav .contenedorTop .ulu {
+  display: flex;
+  width: 100px;
+  padding: 4px;
+  margin-left: 130px;
+  list-style: none;
+  justify-content: space-around;
+  position: absolute;
+  visibility: hidden;
+  left: 700px;
 }
 
 input[type=submit] {
