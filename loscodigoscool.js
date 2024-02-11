@@ -1,4 +1,6 @@
 document.addEventListener('DOMContentLoaded', () => {
+  
+  
   async function obtenerImagenAzar(campeon) {
     try {
       const respuesta = await fetch(
@@ -49,9 +51,12 @@ document.addEventListener('DOMContentLoaded', () => {
     e.preventDefault()
     const titulo = tituloImput.value
     const articulo = articuloImput.value
+    const tiempo= tiempoFuncion()
+    const fecha= fechaFuncion()
+    const numAleatorio = numRandom(1,5)
 
     if (titulo && articulo) {
-      const newPost = { titulo, articulo }
+      const newPost = { titulo, articulo, tiempo, fecha, numAleatorio}
       data.push(newPost)
       saveDataLocalStorage()
       generarTabla()
@@ -219,6 +224,9 @@ document.addEventListener('DOMContentLoaded', () => {
     })
   }
 
+
+  generarTabla() 
+
   function editInfo(index) {
     const item = data[index]
     tituloImput.value = item.titulo
@@ -234,7 +242,7 @@ document.addEventListener('DOMContentLoaded', () => {
     generarTabla()
   }
 
-  generarTabla()
+ 
 
   /* este es el buscador */
   const d = document
@@ -283,3 +291,35 @@ function ocultar(){
   list.style.visibility="hidden"
 }
 */
+
+
+
+// hora
+function tiempoFuncion() {
+  let date = new Date()
+   let hours = date.getHours()
+   let min = date.getMinutes()
+   let seg = date.getSeconds()
+return hours + ":" + min + ":" + seg
+}
+tiempoFuncion()
+
+//fecha
+function fechaFuncion() {
+let date = new Date()
+let day = date.getDate()
+let month = date.getMonth() + 1
+let year = date.getFullYear()
+return day + "-" + month + "-" + year
+}
+
+
+//numero random
+ function numRandom (min, max) {
+ var random= Math.floor(Math.random() * (max - min) + min)
+ return random
+}
+numRandom ()
+
+
+
