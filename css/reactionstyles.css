@@ -1,0 +1,32 @@
+/* reaciones  */
+#likesUp{
+    /* margin-top: -100px;
+    margin-left: 15px; */
+    width: auto;
+    border: none;
+    outline: none;
+    text-align: left;
+    background: none;
+    font-size: 11px;
+    font-weight: 0;
+    pointer-events: none;
+    color: #5d5e5e;
+    /* text-shadow: 2px 2px 3px #2a93b6; */
+  }
+  
+  .emoCounter{
+    display: flex;
+    max-width: 20px;
+  }
+  
+  .eIconBtn{
+    border: transparent;
+    background: transparent;
+    cursor: pointer;
+    
+  
+  }
+  .eIconBtn:hover {
+    
+  
+  }
