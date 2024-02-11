@@ -89,3 +89,17 @@ function deleteInfo(index) {
 }
 
 generarTabla()
+
+
+const boton = document.querySelector(".top")
+const ul = document.querySelector(".ul")
+const botones= ()=>{
+  e.preventDefault()
+  let li = document.createElement("li")
+  let a = document.createElement("a")
+  a.href="/"
+  a.textContent="Week"
+  ul.appendChild(li)
+  li.appendChild(a)
+
+}

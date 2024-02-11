@@ -49,11 +49,14 @@ body {
           color: #3b49df;
           border-radius: 4px;
           padding: 7px 15px;
+          text-decoration: none;
           &:hover {
             text-align: center;
             background-color: #3b49df1a;
             text-decoration: underline;
           }
+        }
+        
         }
         .createAccountHeader {
           text-decoration: none;
@@ -166,7 +169,6 @@ body {
       }
     }
   }
-}
 
 .filter {
   display: none;
@@ -214,16 +216,39 @@ h1, h2, h3, h4 {
   align-items: center;
   gap: 10px;
   margin-left: 10px;
-  a {
+
+  .btn{
+
     text-decoration: none;
     color: #575757;
     padding: 8px 12px;
+    border: 0px;
     &:hover {
       background-color: #fff;
       color: #3b49df;
       border-radius: 8px;
+      
     }
   }
+  .contenedorTop{
+    display:flex;
+    justify-content: space-around;
+  .ul{
+    display:flex;
+    width: 100px;
+    
+    padding:4px;
+    margin-left:130px;
+    list-style: none;
+    justify-content: space-around;
+    position: absolute;
+    visibility: hidden;
+    left: 700px;
+    
+  }
+ 
+}
+
 }
 
 input[type='submit'] {

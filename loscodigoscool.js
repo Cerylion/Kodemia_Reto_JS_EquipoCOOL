@@ -242,4 +242,19 @@ document.addEventListener('DOMContentLoaded', () => {
     })
   }
   searchFilters('.inputNav', '.contenedorPost')
+  
+  
 })
+
+
+function mostrar(){
+  let list = document.querySelector(".ul")
+  
+  list.style.visibility="visible"
+}
+
+function ocultar(){
+  let list = document.querySelector(".ul")
+
+  list.style.visibility="hidden"
+}

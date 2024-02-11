@@ -213,12 +213,18 @@
               </form>
             </div>
           </div> -->
-        
-
           <div class="middleNav">
-            <a class="A" href="/"><strong>Relevant</strong></a> <!-- aquí debería ordenar por lo que nos de la gana -->
-            <a class="A" href="/">Latest </a> <!-- aquí debería ordenar por más nuevos -->
-            <a class="A" href="/">Top </a> <!-- aquí debería ordenar por más likes -->
+          <button  class="btn" onclick="ocultar();"><strong>Relevant</strong></button><!-- aquí debería ordenar por lo que nos de la gana -->
+           <button  class="btn"onclick="ocultar();">Latest</button><!-- aquí debería ordenar por más nuevos -->
+            <div class="contenedorTop">
+             <button class="btn" onclick="mostrar();">Top</button><!-- aquí debería ordenar por más likes -->
+               <ul class="ul" id="ul">
+               <li class="li" style="margin-right: 10px;"><button class="btn"><strong>Week</strong></button></li>
+                <li  class="li" style="margin-right: 10px;"><button class="btn">Month</button></li>
+                <li class="li" style="margin-right: 10px;"><button class="btn">Year</button></li>
+                <li class="li" style="margin-right: 10px;"><button class="btn">Infinity</button></li>
+              </ul>
+          </div>
           </div>
           
           <div id="carouselExampleInterval" class="carousel slide" data-bs-ride="carousel"> <!-- EL CARRUSEL DE IMÁGENES COOL-->

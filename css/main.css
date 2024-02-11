@@ -635,13 +635,14 @@ body header .headerContainer .searchContainer a {
   color: #3b49df;
   border-radius: 4px;
   padding: 7px 15px;
+  text-decoration: none;
 }
 body header .headerContainer .searchContainer a:hover {
   text-align: center;
   background-color: rgba(59, 73, 223, 0.1019607843);
   text-decoration: underline;
 }
-body header .headerContainer .searchContainer .createAccountHeader {
+body header .headerContainer .createAccountHeader {
   text-decoration: none;
   color: #3b49df;
   font-size: 16px;
@@ -649,25 +650,26 @@ body header .headerContainer .searchContainer .createAccountHeader {
   padding: 7px 15px;
   border: 1px solid #3b49df;
 }
-body header .headerContainer .searchContainer .createAccountHeader:hover {
+body header .headerContainer .createAccountHeader:hover {
   background-color: #3b49df;
   color: #fff;
   text-decoration: underline;
 }
-body main {
+
+main {
   display: flex;
   align-items: center;
   justify-content: center;
 }
-body main .mainContainer {
+main .mainContainer {
   box-sizing: border-box;
   max-width: 1180px;
 }
-body main .mainContainer .asideLeft {
+main .mainContainer .asideLeft {
   width: 232px;
   margin: 10px;
 }
-body main .mainContainer .asideLeft .logInBox {
+main .mainContainer .asideLeft .logInBox {
   display: flex;
   background: #fff;
   flex-direction: column;
@@ -675,7 +677,7 @@ body main .mainContainer .asideLeft .logInBox {
   padding: 16px;
   margin-top: -10px;
 }
-body main .mainContainer .asideLeft .logInBox .logInButtons {
+main .mainContainer .asideLeft .logInBox .logInButtons {
   display: flex;
   align-items: center;
   gap: 5px;
@@ -683,50 +685,50 @@ body main .mainContainer .asideLeft .logInBox .logInButtons {
   flex-direction: column;
   padding: 10px;
 }
-body main .mainContainer .asideLeft .logInBox .logInButtons .A {
+main .mainContainer .asideLeft .logInBox .logInButtons .A {
   text-decoration: none;
   color: black;
   font-size: 16px;
   border-radius: 4px;
   padding: 7px 15px;
 }
-body main .mainContainer .asideLeft .asideNav {
+main .mainContainer .asideLeft .asideNav {
   width: 100%;
   margin-top: 30px;
 }
-body main .mainContainer .asideLeft .asideNav a {
+main .mainContainer .asideLeft .asideNav a {
   font-size: 15px;
   text-decoration: none;
   width: 100%;
   color: black;
 }
-body main .mainContainer .asideLeft .asideNav .asideIcons i {
+main .mainContainer .asideLeft .asideNav .asideIcons i {
   font-size: 23px;
   padding: 5px;
   margin-right: 0;
 }
-body main .mainContainer .asideLeft .asideNav .asideIcons i:hover {
+main .mainContainer .asideLeft .asideNav .asideIcons i:hover {
   padding: 5px;
   background: rgba(59, 73, 223, 0.1019607843);
 }
-body main .mainContainer .asideLeft .asideNav i {
+main .mainContainer .asideLeft .asideNav i {
   font-size: 17px;
   margin-right: 15px;
 }
-body main .mainContainer .asideLeft .asideNav li {
+main .mainContainer .asideLeft .asideNav li {
   list-style: none;
   padding: 7px 15px;
 }
-body main .mainContainer .asideLeft .asideNav li:hover {
+main .mainContainer .asideLeft .asideNav li:hover {
   background-color: rgba(59, 73, 223, 0.1019607843);
   width: 80%;
   border-radius: 4px;
   text-decoration: underline;
 }
-body main .mainContainer .asideLeft .asideNav .other {
+main .mainContainer .asideLeft .asideNav .other {
   margin-bottom: 30px;
 }
-body main .mainContainer .asideLeft .asideNav ul {
+main .mainContainer .asideLeft .asideNav ul {
   display: flex;
   align-self: start;
   flex-direction: column;
@@ -734,10 +736,10 @@ body main .mainContainer .asideLeft .asideNav ul {
   padding-left: 0;
   width: 100%;
 }
-body main .mainContainer .juniorDevSectionPadding {
+main .mainContainer .juniorDevSectionPadding {
   display: flex;
 }
-body main .mainContainer .juniorDevSectionPadding .postForms {
+main .mainContainer .juniorDevSectionPadding .postForms {
   display: flex;
   gap: 10px;
   font-size: 16px;
@@ -799,15 +801,31 @@ h1, h2, h3, h4 {
   gap: 10px;
   margin-left: 10px;
 }
-.middleNav a {
+.middleNav .btn {
   text-decoration: none;
   color: #575757;
   padding: 8px 12px;
+  border: 0px;
 }
-.middleNav a:hover {
+.middleNav .btn:hover {
   background-color: #fff;
   color: #3b49df;
   border-radius: 8px;
+}
+.middleNav .contenedorTop {
+  display: flex;
+  justify-content: space-around;
+}
+.middleNav .contenedorTop .ul {
+  display: flex;
+  width: 100px;
+  padding: 4px;
+  margin-left: 130px;
+  list-style: none;
+  justify-content: space-around;
+  position: absolute;
+  visibility: hidden;
+  left: 700px;
 }
 
 input[type=submit] {
