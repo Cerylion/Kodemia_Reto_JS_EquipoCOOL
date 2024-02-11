@@ -195,11 +195,22 @@ document.addEventListener('DOMContentLoaded', () => {
 
       editBoton.addEventListener('click', function () {
         editInfo(index)
+        top()
       })
 
       deleteBoton.addEventListener('click', function () {
         deleteInfo(index)
+         top()
       })
+
+      function top (){
+        window.scroll({
+            top: 100,
+            left: 100,
+            behavior: "smooth",
+          });
+      }
+      top()
 
       accionesBoton.appendChild(editBoton)
       accionesBoton.appendChild(deleteBoton)
@@ -293,6 +304,7 @@ function ocultar(){
 }
 */
 
+//subir a top
 
 
 // hora
