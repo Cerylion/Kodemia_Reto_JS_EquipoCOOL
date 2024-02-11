@@ -173,14 +173,15 @@ document.addEventListener('DOMContentLoaded', () => {
       emojisContenedor.appendChild(emo5)
       emojisContenedor.appendChild(emo6)
 
-      const tiempoContenedor = document.createElement('div')
-      tiempoContenedor.className = 'tiempoContenedor'
-      const tiempo = document.createElement('p')
-      tiempo.type = ''
-      tiempo.textContent = ' 4 min read'
-      tiempo.className = 'tiempo'
+    //tiempo
+    const tiempoContenedor=document.createElement ('div')
+    tiempoContenedor.className='tiempoContenedor'
+    const tiempo=document.createElement ('p')
+    tiempo.type=''
+    tiempo.className='tiempo'
+    tiempo.textContent = item.tiempo
+    tiempoContenedor.appendChild (tiempo)
 
-      tiempoContenedor.appendChild(tiempo)
       //botones
 
       celdaTitulo.textContent = item.titulo
