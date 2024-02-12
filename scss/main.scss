@@ -340,3 +340,61 @@ input[type='submit'] {
     border-radius: 5px;
   }
 }
+
+.contenedorPost {
+  box-shadow: none;
+  display: flex;
+  margin-top: 10px;
+  padding: 5px;
+  max-width: 100%;
+  min-width: 100%;
+  background-color: rgb( 255, 255, 255 );
+  border-radius: 7px;
+  flex-direction: column;
+}
+
+.bodyTabla{
+  max-width: 100%;
+  min-width: 100%;
+  }
+
+  .tabla {
+    max-width: 100%;
+    min-width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-content: center;
+    justify-content: center;
+}
+
+.botoncito {
+  color: #3b49df;
+  text-align: center;
+  width: 100%;
+  font-size: 16px;
+  border-radius: 4px;
+  padding: 7px 15px;
+  border: 1px solid #3b49df;
+  background-color: rgb( 255, 255, 255 );
+  text-decoration: none;
+}
+.botoncito:hover{
+  background-color: #3b49df;
+  color: #fff;
+  text-decoration: underline;
+  opacity: none;
+}
+
+
+.botonesContenedor {
+  justify-items: right;
+  font-size: 8px;
+  display: flex;
+  max-width: 100px;
+  max-height: 50px;
+  flex-wrap: nowrap;
+  flex-direction: row;
+  align-content: flex-end;
+  justify-content: space-between;
+  align-items: flex-start;
+}
