@@ -130,7 +130,7 @@ document.addEventListener('DOMContentLoaded', () => {
       emo5.textContent = '🔥'
       const emo6 = document.createElement('p')
       emo6.className = 'emoticon6'
-      emo6.textContent = '💬 97'
+      emo6.textContent = '💬' + item.numAleatorio
 
       emojisContenedor.appendChild(emo1)
       emojisContenedor.appendChild(emo2)
@@ -145,7 +145,7 @@ document.addEventListener('DOMContentLoaded', () => {
       const tiempo = document.createElement('p')
       tiempo.type = ''
       tiempo.className = 'tiempo'
-      tiempo.textContent = item.tiempo
+      tiempo.textContent = item.tiempo + "  --  " + item.fecha
       tiempoContenedor.appendChild(tiempo)
 
       //botones
