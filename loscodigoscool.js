@@ -105,7 +105,7 @@ document.addEventListener('DOMContentLoaded', () => {
       const divNombre = document.createElement('div')
       divNombre.className = 'nombreUsuario'
       const divNombreH3 = document.createElement('H3')
-      divNombreH3.textContent = '🦄 Nombre del usuario'
+      divNombreH3.textContent = 'Nombre del usuario'
       divNombre.appendChild(divNombreH3)
       bodyTabla.appendChild(divNombre)
 
@@ -245,7 +245,6 @@ document.addEventListener('DOMContentLoaded', () => {
     data.splice(index, 1)
     saveDataLocalStorage()
     generarTabla()
-    
   }
 
   function deleteInfo(index) {
