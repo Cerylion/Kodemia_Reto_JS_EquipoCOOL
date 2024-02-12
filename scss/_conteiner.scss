@@ -3,14 +3,14 @@
   border: 1px solid rgb(248, 248, 248);
   border-radius: 20px;
   font-family: 'Roboto', sans-serif;
-  height: 450px;  
+  height: 270px;  
   box-shadow: 2px 2px 0px rgba(0, 0, 0, 0.431); 
   .contenedorP{ 
     display: flex;
     border: 1px solid rgb(248, 248, 248);
     border-radius: 20px;
     font-family: 'Roboto', sans-serif;
-    height: 450px;
+    height: 270px;
     width: 100%;
     box-shadow: 2px 2px 0px rgba(0, 0, 0, 0.431);
     align-items: center;
@@ -20,7 +20,7 @@
       border: 1px solid rgb(248, 248, 248);
       border-radius: 20px;
       font-family: 'Roboto', sans-serif;
-      height: 450px;
+      height: 270px;
       width: 100%;
       box-shadow: 2px 2px 0px rgba(0, 0, 0, 0.431);
       align-items:stretch;
@@ -28,7 +28,7 @@
       flex-direction: column;
       .articulo{
         max-width:100%;
-        max-height:100%;
+        max-height:70%;
       }
       .titulo{
         min-width:300px ;
@@ -51,8 +51,25 @@
   text-align: center;
 }
 
-.contenedorPost{  
-  
+.contenedorPost {
+  display: flex;
+
+  border: 1px solid rgb(248, 248, 248);
+  border-radius: 20px;
+  font-family: 'Roboto', sans-serif;
+  height: 100%;
+  width: 100%;
+  box-shadow: 15px 15px 0px rgba(0, 0, 0, 0.431);
+  grid-template-columns: repeat(4, 1fr);
+  justify-items: start;
+  box-shadow: none;
+  margin-top: 10px;
+  padding: 5px;
+  max-width: 100%;
+  min-width: 100%;
+  background-color: rgb( 255, 255, 255 );
+  border-radius: 7px;
+  flex-direction: column;
 }
 
 .nombreUsuario{

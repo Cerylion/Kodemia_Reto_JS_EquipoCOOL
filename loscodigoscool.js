@@ -91,7 +91,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
       bodyTabla.appendChild(divImagen)
       divImagen.appendChild(creaImagen)
-      // creaImagen.src =
+      creaImagen.src = ''
 
       /*  async function mostrarImagen() {
         const imagenURL = await obtenerImagenAzar('Kled')

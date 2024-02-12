@@ -341,26 +341,6 @@ input[type='submit'] {
   }
 }
 
-.contenedorPost {
-  border: 1px solid rgb(248, 248, 248);
-  border-radius: 20px;
-  font-family: 'Roboto', sans-serif;
-  height: 100%;
-  width: 100%;
-  box-shadow: 15px 15px 0px rgba(0, 0, 0, 0.431);
-  grid-template-columns: repeat(4, 1fr);
-  justify-items: start;
-  box-shadow: none;
-  display: flex;
-  margin-top: 10px;
-  padding: 5px;
-  max-width: 100%;
-  min-width: 100%;
-  background-color: rgb( 255, 255, 255 );
-  border-radius: 7px;
-  flex-direction: column;
-}
-
 .bodyTabla{
   max-width: 100%;
   min-width: 100%;
@@ -406,3 +386,4 @@ input[type='submit'] {
   justify-content: space-between;
   align-items: flex-start;
 }
+
