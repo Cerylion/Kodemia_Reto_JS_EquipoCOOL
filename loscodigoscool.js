@@ -51,7 +51,14 @@ document.addEventListener('DOMContentLoaded', () => {
       
       
       
-      
+        //nombre
+        const divNombre = document.createElement('div')
+        divNombre.className = 'nombreUsuario'
+        const divNombreH3 = document.createElement('H5')
+        divNombreH3.textContent = item.nombreAleatorio
+        divNombre.appendChild(divNombreH3)
+        bodyTabla.appendChild(divNombre)
+
       //imagen
       divGranContenedor.className = 'juniorDevSectionPadding'
       const divImagen = document.createElement('div')
@@ -65,13 +72,7 @@ document.addEventListener('DOMContentLoaded', () => {
       creaImagen.src = `https://ddragon.leagueoflegends.com/cdn/img/champion/splash/Lux_${item.numAleatorio}.jpg`
 
 
-      //nombre
-      const divNombre = document.createElement('div')
-      divNombre.className = 'nombreUsuario'
-      const divNombreH3 = document.createElement('H5')
-      divNombreH3.textContent = item.nombreAleatorio
-      divNombre.appendChild(divNombreH3)
-      bodyTabla.appendChild(divNombre)
+    
 
 
 
@@ -312,3 +313,6 @@ function DiaRandom(){
 	return fecha[fecha_Random]
 }
 DiaRandom()
+
+
+
