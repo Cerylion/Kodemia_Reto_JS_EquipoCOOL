@@ -7,43 +7,6 @@ document.addEventListener('DOMContentLoaded', () => {
 */
 
 
-  async function obtenerImagenAzar(campeon) {
-    try {
-      const respuesta = await fetch(
-        `https://ddragon.leagueoflegends.com/cdn/14.3.1/data/en_US/champion/${campeon}.json`
-      )
-      if (!respuesta.ok) {
-        throw new Error(`Error al obtener los datos del campeón ${campeon}`)
-      }
-      const datos = await respuesta.json()
-      const campeonData = datos.data[campeon]
-      if (!campeonData || !campeonData.skins) {
-        throw new Error(`Datos de skins del campeón ${campeon} no encontrados`)
-      }
-      const skins = campeonData.skins
-      const skinAzar = skins[Math.floor(Math.random() * skins.length)] // para seleccionar una al azar
-      return `https://ddragon.leagueoflegends.com/cdn/img/champion/loading/${campeon}_${skinAzar.num}.jpg`
-    } catch (error) {
-      console.error('Error:', error)
-      return null
-    }
-  }
-
-  async function mostrarImagen() {
-    const imagenURL = await obtenerImagenAzar('Kled')
-    if (imagenURL) {
-      const imagen = document.createElement('img')
-      imagen.src = imagenURL
-      //imagen.className = 'profileImage' esto le agrega la clase a la imagen
-      //document.getElementById('insertIMG').src = imagenURL // esto es lo que mete la imagen dentro del cuadrito - no se puede hacer con la clase
-      //document.body.appendChild(imagen) esto mete la imagen al final del doc
-    } else {
-      console.log('No se pudo obtener la imagen.')
-    }
-  }
-
-  mostrarImagen()
-
   // la magia de los post
 
   const form = document.querySelector('form')
@@ -59,10 +22,14 @@ document.addEventListener('DOMContentLoaded', () => {
     const articulo = articuloImput.value
     const tiempo = tiempoFuncion()
     const fecha = fechaFuncion()
-    const numAleatorio = numRandom(1, 5)
+    const numAleatorio = numRandom(1, 9)
+    const nombreAleatorio= generateNombreRandom()
+    const diaAleatorio= DiaRandom()
+    const fechaAleatoria = FechaRandom()
+    
 
     if (titulo && articulo) {
-      const newPost = { titulo, articulo, tiempo, fecha, numAleatorio }
+      const newPost = { titulo, articulo, tiempo, fecha, numAleatorio, nombreAleatorio, diaAleatorio, fechaAleatoria}
       data.push(newPost)
       saveDataLocalStorage()
       generarTabla()
@@ -81,6 +48,17 @@ document.addEventListener('DOMContentLoaded', () => {
       //gran contenedor//
 
       const divGranContenedor = document.createElement('div')
+      
+      
+      
+        //nombre
+        const divNombre = document.createElement('div')
+        divNombre.className = 'nombreUsuario'
+        const divNombreH3 = document.createElement('H5')
+        divNombreH3.textContent = item.nombreAleatorio
+        divNombre.appendChild(divNombreH3)
+        bodyTabla.appendChild(divNombre)
+
       //imagen
       divGranContenedor.className = 'juniorDevSectionPadding'
       const divImagen = document.createElement('div')
@@ -88,32 +66,15 @@ document.addEventListener('DOMContentLoaded', () => {
       const creaImagen = document.createElement('img')
       creaImagen.className = 'profileImage'
       creaImagen.type = 'img'
-
+      divImagen.textContent= item.diaAleatorio + " " + item.fechaAleatoria
       bodyTabla.appendChild(divImagen)
       divImagen.appendChild(creaImagen)
       creaImagen.src = `https://ddragon.leagueoflegends.com/cdn/img/champion/splash/Lux_${item.numAleatorio}.jpg`
 
-      /*  async function mostrarImagen() {
-        const imagenURL = await obtenerImagenAzar('Kled')
-        if (imagenURL) {
-          const imagen = document.createElement('img')
-          imagen.src = imagenURL
-          //imagen.className = 'profileImage' esto le agrega la clase a la imagen
-          document.getElementById('insertIMG2').src = imagenURL // esto es lo que mete la imagen dentro del cuadrito - no se puede hacer con la clase
-          //document.body.appendChild(imagen) esto mete la imagen al final del doc
-        } else {
-          console.log('No se pudo obtener la imagen.')
-        }
-      }
-      mostrarImagen () */
 
-      //nombre
-      const divNombre = document.createElement('div')
-      divNombre.className = 'nombreUsuario'
-      const divNombreH3 = document.createElement('H3')
-      divNombreH3.textContent = 'Nombre del usuario'
-      divNombre.appendChild(divNombreH3)
-      bodyTabla.appendChild(divNombre)
+    
+
+
 
       //contenedorPost//
       const fila = document.createElement('div')
@@ -170,7 +131,7 @@ document.addEventListener('DOMContentLoaded', () => {
       emo5.textContent = '🔥'
       const emo6 = document.createElement('p')
       emo6.className = 'emoticon6'
-      emo6.textContent = '💬 97'
+      emo6.textContent = '💬' + item.numAleatorio
 
       emojisContenedor.appendChild(emo1)
       emojisContenedor.appendChild(emo2)
@@ -185,7 +146,7 @@ document.addEventListener('DOMContentLoaded', () => {
       const tiempo = document.createElement('p')
       tiempo.type = ''
       tiempo.className = 'tiempo'
-      tiempo.textContent = item.tiempo
+      tiempo.textContent = item.tiempo + "  --  " + item.fecha
       tiempoContenedor.appendChild(tiempo)
 
       //botones
@@ -322,3 +283,36 @@ function numRandom(min, max) {
   return random
 }
 numRandom()
+
+
+//nombre random
+function generateNombreRandom(){
+	var firstname = ["Adrián", "Agustín", "Alberto", "Alejandro", "Alexander", "Alexis", "Alonso", "Andrés Felipe", "Ángel", "Anthony", "Antonio", "Bautista", "Benicio", "Benjamín", "Carlos", "Carlos Alberto", "Carlos Eduardo", "Carlos Roberto", "César", "Cristóbal", "Daniel", "David", "Diego", "Dylan", "Eduardo", "Emiliano", "Emmanuel", "Enrique", "Erik", "Ernesto", "Ethan", "Fabián", "Facundo", "Felipe", "Félix", "Félix María", "Fernando", "Francisco", "Francisco Javier", "Gabriel", "Gaspar", "Gustavo Adolfo", "Hugo", "Ian", "Iker", "Isaac", "Jacob", "Javier", "Jayden", "Jeremy", "Jerónimo", "Jesús", "Jesús Antonio", "Jesús Víctor", "Joaquín", "Jorge", "Jorge  Alberto", "Jorge Luis", "José", "José Antonio", "José Daniel", "José David", "José Francisco", "José Gregorio", "José Luis", "José Manuel", "José Pablo", "Josué", "Juan", "Juan Ángel", "Juan Carlos", "Juan David", "Juan Esteban", "Juan Ignacio", "Juan José", "Juan Manuel", "Juan Pablo", "Juan Sebastián", "Julio", "Julio Cesar", "Justin", "Kevin", "Lautaro", "Liam", "Lian", "Lorenzo", "Lucas", "Luis", "Luis Alberto", "Luis Emilio", "Luis Fernando", "Manuel", "Manuel Antonio", "Marco Antonio", "Mario", "Martín", "Mateo", "Matías", "Maximiliano", "Maykel", "Miguel", "Miguel  ngel", "Nelson", "Noah", "Oscar", "Pablo", "Pedro", "Rafael", "Ramón", "Raúl", "Ricardo", "Rigoberto", "Roberto", "Rolando", "Samuel", "Samuel David", "Santiago", "Santino", "Santos", "Sebastián", "Thiago", "Thiago Benjamín", "Tomás", "Valentino", "Vicente", "Víctor", "Víctor Hugo"];
+	var lastname= ["Garcia", "Gonzalez", "Rodriguez", "Fernandez", "Lopez", "Martinez", "Sanchez", "Perez", "Gomez", "Martin", "Jimenez", "Ruiz", "Hernandez", "Diaz", "Moreno", "Alvarez", "Muñoz", "Romero", "Alonso", "Gutierrez", "Navarro", "Torres", "Dominguez",
+	"Vazquez", "Ramos", "Gil", "Ramirez", "Serrano", "Blanco", "Suarez", "Molina", "Morales", "Ortega", "Delgado", "Castro", "Ortiz", "Rubio", "Marin", "Sanz", "Nuñez", "Iglesias", "Medina", "Garrido", "Santos", "Castillo", "Cortes", "Lozano", "Guerrero", "Cano", "Prieto", "Mendez", "Calvo", "Cruz", "Gallego", "Vidal", "Leon", "Herrera", "Marquez", "Peña", "Cabrera", "Flores", "Campos", "Vega", "Diez", "Fuentes", "Carrasco", "Caballero", "Nieto", "Reyes", "Aguilar", "Pascual", "Herrero", "Santana", "Lorenzo", "Hidalgo", "Montero", "Ibañez", "Gimenez", "Ferrer", "Duran", "Vicente", "Benitez", "Mora", "Santiago", "Arias", "Vargas", "Carmona", "Crespo", "Roman", "Pastor", "Soto", "Saez", "Velasco", "Soler", "Moya", "Esteban", "Parra", "Bravo", "Gallardo", "Rojas", "Pardo", "Merino", "Franco", "Espinosa", "Izquierdo", "Lara", "Rivas", "Silva", "Rivera", "Casado", "Arroyo", "Redondo", "Camacho", "Rey", "Vera", "Otero", "Luque", "Galan", "Montes", "Rios", "Sierra", "Segura", "Carrillo", "Marcos", "Marti", "Soriano", "Mendoza"];
+	var rand_first = Math.floor(Math.random()*firstname.length); 
+	var rand_last = Math.floor(Math.random()*lastname.length); 
+	return firstname[rand_first]+" "+lastname[rand_last];
+}
+generateNombreRandom()
+
+
+
+function FechaRandom () {
+  var anno = 2024
+  var randomDia = Math.floor(Math.random() * (29 - 1) + 1)
+  var randomMes = Math.floor(Math.random() * (12 - 0) + 1) 
+  return randomDia + "/" + randomMes + "/" + anno
+}
+FechaRandom()
+
+
+function DiaRandom(){
+	var fecha = ["lunes", "martes", "miercoles", "jueves", "viernes"];
+	var fecha_Random = Math.floor(Math.random()*fecha.length); 
+	return fecha[fecha_Random]
+}
+DiaRandom()
+
+
+
