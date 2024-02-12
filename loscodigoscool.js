@@ -228,11 +228,10 @@ document.addEventListener('DOMContentLoaded', () => {
       fila.appendChild(celdaTitulo)
       fila.appendChild(celdaArticulo)
       fila.appendChild(accionesBoton)
-      //fila.appendChild (tagsSection)
-      // fila.appendChild (emojisContenedor)
       fila.appendChild(contenedorReaccionesMas)
 
-      bodyTabla.appendChild(fila)
+     //hace que el post se muestre arriba
+      bodyTabla.prepend(fila)
     })
   }
 
