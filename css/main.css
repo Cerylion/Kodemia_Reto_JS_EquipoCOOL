@@ -481,7 +481,6 @@ img.fullWidth {
   border-radius: 20px;
   font-family: "Roboto", sans-serif;
   height: 270px;
-  box-shadow: 2px 2px 0px rgba(0, 0, 0, 0.431);
 }
 .conteiner .contenedorP {
   display: flex;
@@ -490,7 +489,6 @@ img.fullWidth {
   font-family: "Roboto", sans-serif;
   height: 270px;
   width: 100%;
-  box-shadow: 2px 2px 0px rgba(0, 0, 0, 0.431);
   align-items: center;
   justify-content: center;
 }
@@ -501,7 +499,6 @@ img.fullWidth {
   font-family: "Roboto", sans-serif;
   height: 270px;
   width: 100%;
-  box-shadow: 2px 2px 0px rgba(0, 0, 0, 0.431);
   align-items: stretch;
   justify-content: center;
   flex-direction: column;
@@ -535,7 +532,6 @@ img.fullWidth {
   font-family: "Roboto", sans-serif;
   height: 100%;
   width: 100%;
-  box-shadow: 15px 15px 0px rgba(0, 0, 0, 0.431);
   grid-template-columns: repeat(4, 1fr);
   justify-items: start;
   box-shadow: none;
@@ -594,6 +590,24 @@ img.fullWidth {
 .contenedorReaccionesMas {
   display: flex;
   font-size: 10px;
+}
+
+.carousel-item {
+  max-height: 270px;
+}
+
+form#crudForm {
+  margin-top: 20px;
+}
+
+.articulo {
+  background-color: white;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin: 5px 0;
+  border-radius: 10px;
 }
 
 /*
