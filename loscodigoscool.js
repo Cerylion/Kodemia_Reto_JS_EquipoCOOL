@@ -1,6 +1,12 @@
 document.addEventListener('DOMContentLoaded', () => {
   
-  
+  /*
+  BTNO1.addEventListener = ('click', ocultar())
+  BTNO2.addEventListener = ('click', ocultar())
+  BTNM.addEventListener = ('click', mostrar())
+*/
+
+
   async function obtenerImagenAzar(campeon) {
     try {
       const respuesta = await fetch(
@@ -29,7 +35,7 @@ document.addEventListener('DOMContentLoaded', () => {
       const imagen = document.createElement('img')
       imagen.src = imagenURL
       //imagen.className = 'profileImage' esto le agrega la clase a la imagen
-      document.getElementById('insertIMG').src = imagenURL // esto es lo que mete la imagen dentro del cuadrito - no se puede hacer con la clase
+      //document.getElementById('insertIMG').src = imagenURL // esto es lo que mete la imagen dentro del cuadrito - no se puede hacer con la clase
       //document.body.appendChild(imagen) esto mete la imagen al final del doc
     } else {
       console.log('No se pudo obtener la imagen.')
@@ -51,12 +57,12 @@ document.addEventListener('DOMContentLoaded', () => {
     e.preventDefault()
     const titulo = tituloImput.value
     const articulo = articuloImput.value
-    const tiempo= tiempoFuncion()
-    const fecha= fechaFuncion()
-    const numAleatorio = numRandom(1,5)
+    const tiempo = tiempoFuncion()
+    const fecha = fechaFuncion()
+    const numAleatorio = numRandom(1, 5)
 
     if (titulo && articulo) {
-      const newPost = { titulo, articulo, tiempo, fecha, numAleatorio}
+      const newPost = { titulo, articulo, tiempo, fecha, numAleatorio }
       data.push(newPost)
       saveDataLocalStorage()
       generarTabla()
@@ -173,14 +179,14 @@ document.addEventListener('DOMContentLoaded', () => {
       emojisContenedor.appendChild(emo5)
       emojisContenedor.appendChild(emo6)
 
-    //tiempo
-    const tiempoContenedor=document.createElement ('div')
-    tiempoContenedor.className='tiempoContenedor'
-    const tiempo=document.createElement ('p')
-    tiempo.type=''
-    tiempo.className='tiempo'
-    tiempo.textContent = item.tiempo
-    tiempoContenedor.appendChild (tiempo)
+      //tiempo
+      const tiempoContenedor = document.createElement('div')
+      tiempoContenedor.className = 'tiempoContenedor'
+      const tiempo = document.createElement('p')
+      tiempo.type = ''
+      tiempo.className = 'tiempo'
+      tiempo.textContent = item.tiempo
+      tiempoContenedor.appendChild(tiempo)
 
       //botones
 
@@ -200,15 +206,15 @@ document.addEventListener('DOMContentLoaded', () => {
 
       deleteBoton.addEventListener('click', function () {
         deleteInfo(index)
-         top()
+        top()
       })
 
-      function top (){
+      function top() {
         window.scroll({
-            top: 100,
-            left: 100,
-            behavior: "smooth",
-          });
+          top: 100,
+          left: 100,
+          behavior: 'smooth'
+        })
       }
       top()
 
@@ -230,13 +236,12 @@ document.addEventListener('DOMContentLoaded', () => {
       fila.appendChild(accionesBoton)
       fila.appendChild(contenedorReaccionesMas)
 
-     //hace que el post se muestre arriba
+      //hace que el post se muestre arriba
       bodyTabla.prepend(fila)
     })
   }
 
-
-  generarTabla() 
+  generarTabla()
 
   function editInfo(index) {
     const item = data[index]
@@ -252,8 +257,6 @@ document.addEventListener('DOMContentLoaded', () => {
     saveDataLocalStorage()
     generarTabla()
   }
-
- 
 
   /* este es el buscador */
   const d = document
@@ -272,66 +275,50 @@ document.addEventListener('DOMContentLoaded', () => {
     })
   }
   searchFilters('.inputNav', '.contenedorPost')
-  const BTNM = document.getElementsByClassName('btnM')
-  const BTNO = document.querySelectorAll('btnO')
-  console.log(BTNM, BTNO)
+
   
-  const mostrar = () => {
-    const list = document.querySelector('.ulu')
-    console.log(list)
-    list.style.visibility = 'visible'
-  }
-  const ocultar = () => {
-    const list = document.querySelector('.ulu')
-    list.style.visibility = 'hidden'
-  }
-  BTNM.onclick = mostrar()
-  BTNO.onclick = ocultar()
 })
 
-/*
-function mostrar(){
-  let list = document.querySelector(".ul")
+
+// Mostrar y ocultar los buscadores por fechas
+const mostrar = () => {
   
-  list.style.visibility="visible"
+  const list = document.getElementById('ulu')
+  
+  list.style.display = 'flex'
+  
 }
-
-function ocultar(){
-  let list = document.querySelector(".ul")
-
-  list.style.visibility="hidden"
+const ocultar = () => {
+  
+  const list = document.getElementById('ulu')
+  
+  list.style.display = 'none'
 }
-*/
 
 //subir a top
-
 
 // hora
 function tiempoFuncion() {
   let date = new Date()
-   let hours = date.getHours()
-   let min = date.getMinutes()
-   let seg = date.getSeconds()
-return hours + ":" + min + ":" + seg
+  let hours = date.getHours()
+  let min = date.getMinutes()
+  let seg = date.getSeconds()
+  return hours + ':' + min + ':' + seg
 }
 tiempoFuncion()
 
 //fecha
 function fechaFuncion() {
-let date = new Date()
-let day = date.getDate()
-let month = date.getMonth() + 1
-let year = date.getFullYear()
-return day + "-" + month + "-" + year
+  let date = new Date()
+  let day = date.getDate()
+  let month = date.getMonth() + 1
+  let year = date.getFullYear()
+  return day + '-' + month + '-' + year
 }
-
 
 //numero random
- function numRandom (min, max) {
- var random= Math.floor(Math.random() * (max - min) + min)
- return random
+function numRandom(min, max) {
+  var random = Math.floor(Math.random() * (max - min) + min)
+  return random
 }
-numRandom ()
-
-
-
+numRandom()

@@ -379,6 +379,7 @@ img.fullWidth {
   border-right: 0.5px solid;
   border-bottom: 0.5px solid;
   display: block;
+  box-shadow: 0px, 8px, 16px;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -393,7 +394,7 @@ img.fullWidth {
   border-right: 0.5px solid;
   border-bottom: 0.5px solid;
   display: block;
- 
+  box-shadow: 0px, 8px, 16px;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -408,7 +409,7 @@ img.fullWidth {
   border-right: 0.5px solid;
   border-bottom: 0.5px solid;
   display: block;
-  
+  box-shadow: 0px, 8px, 16px;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -423,7 +424,7 @@ img.fullWidth {
   border-right: 0.5px solid;
   border-bottom: 0.5px solid;
   display: block;
-  
+  box-shadow: 0px, 8px, 16px;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -480,16 +481,16 @@ img.fullWidth {
   border-radius: 20px;
   font-family: "Roboto", sans-serif;
   height: 450px;
-  /*box-shadow: 2px 2px 0px rgba(0, 0, 0, 0.431);*/
+  box-shadow: 2px 2px 0px rgba(0, 0, 0, 0.431);
 }
 .conteiner .contenedorP {
   display: flex;
   border: 1px solid rgb(248, 248, 248);
   border-radius: 20px;
   font-family: "Roboto", sans-serif;
-  height: 300px;
+  height: 450px;
   width: 100%;
-  /*box-shadow: 2px 2px 0px rgba(0, 0, 0, 0.431);*/
+  box-shadow: 2px 2px 0px rgba(0, 0, 0, 0.431);
   align-items: center;
   justify-content: center;
 }
@@ -498,9 +499,9 @@ img.fullWidth {
   border: 1px solid rgb(248, 248, 248);
   border-radius: 20px;
   font-family: "Roboto", sans-serif;
-  height: 300px;
+  height: 450px;
   width: 100%;
-  /*box-shadow: 2px 2px 0px rgba(0, 0, 0, 0.431);*/
+  box-shadow: 2px 2px 0px rgba(0, 0, 0, 0.431);
   align-items: stretch;
   justify-content: center;
   flex-direction: column;
@@ -515,6 +516,28 @@ img.fullWidth {
 }
 .conteiner .postCreado {
   display: flex;
+}
+
+.botoncito {
+  background-color: rgba(20, 19, 19, 0.185);
+  background-size: 100%;
+  font-size: 80%;
+  color: rgba(4, 4, 4, 0.907);
+  border-radius: 10px;
+  opacity: 0.5;
+  text-align: center;
+}
+
+.contenedorPost {
+  border: 1px solid rgb(248, 248, 248);
+  border-radius: 20px;
+  font-family: "Roboto", sans-serif;
+  height: 100%;
+  width: 100%;
+  box-shadow: 15px 15px 0px rgba(0, 0, 0, 0.431);
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  justify-items: start;
 }
 
 .nombreUsuario {
@@ -535,6 +558,11 @@ img.fullWidth {
   font-size: 20px;
 }
 
+.botonesContenedor {
+  justify-items: right;
+  font-size: 20px;
+  display: flex;
+}
 
 .tagsAside {
   grid-column: 1/-1;
@@ -550,7 +578,10 @@ img.fullWidth {
   display: flex;
 }
 
-
+.botonesContenedor {
+  grid-column: 1/-1;
+  display: flex;
+}
 
 .contenedorReaccionesMas {
   display: flex;
@@ -763,12 +794,15 @@ h1, h2, h3, h4 {
 .middleNav {
   background-color: #f5f5f5;
   height: 44px;
-  display: flex;
+  display: grid;
+  grid-auto-flow: column;
+  flex-direction: row;
   align-items: center;
   gap: 10px;
   margin-left: 10px;
 }
 .middleNav .btn {
+  display: flex;
   text-decoration: none;
   color: #575757;
   padding: 8px 12px;
@@ -780,19 +814,15 @@ h1, h2, h3, h4 {
   border-radius: 8px;
 }
 .middleNav .contenedorTop {
-  display: flex;
-  justify-content: space-around;
+  justify-self: flex-end;
+  display: none;
+  height: 40px;
+  width: -moz-fit-content;
+  width: fit-content;
 }
-.middleNav .contenedorTop .ulu {
-  display: flex;
-  width: 100px;
-  padding: 4px;
-  margin-left: 130px;
-  list-style: none;
-  justify-content: space-around;
-  position: absolute;
-  visibility: hidden;
-  left: 700px;
+.middleNav .contenedorTop #ulu {
+  padding: 0;
+  display: none;
 }
 
 input[type=submit] {
@@ -890,75 +920,3 @@ input[type=submit]:hover {
     border-radius: 5px;
   }
 }/*# sourceMappingURL=main.css.map */
-
-.conteiner{
-  height: 300px;
-}
-
-.carousel-inner{
-  max-height: 270px;
-}
-.crudForm{
-  margin-top: 20px;
-}
-
-
-
-.contenedorPost {
-  box-shadow: none;
-  display: flex;
-  margin-top: 10px;
-  padding: 5px;
-  max-width: 100%;
-  min-width: 100%;
-  background-color: rgb( 255, 255, 255 );
-  border-radius: 7px;
-  flex-direction: column;
-}
-
-.bodyTabla{
-  max-width: 100%;
-  min-width: 100%;
-  }
-
- 
-  .tabla {
-    max-width: 100%;
-    min-width: 100%;
-    display: flex;
-    flex-direction: column;
-    align-content: center;
-    justify-content: center;
-}
-
-.botoncito {
-  color: #3b49df;
-  text-align: center;
-  width: 100%;
-  font-size: 16px;
-  border-radius: 4px;
-  padding: 7px 15px;
-  border: 1px solid #3b49df;
-  background-color: rgb( 255, 255, 255 );
-  text-decoration: none;
-}
-.botoncito:hover{
-  background-color: #3b49df;
-  color: #fff;
-  text-decoration: underline;
-  opacity: none;
-}
-
-
-.botonesContenedor {
-  justify-items: right;
-  font-size: 8px;
-  display: flex;
-  max-width: 100px;
-  max-height: 50px;
-  flex-wrap: nowrap;
-  flex-direction: row;
-  align-content: flex-end;
-  justify-content: space-between;
-  align-items: flex-start;
-}

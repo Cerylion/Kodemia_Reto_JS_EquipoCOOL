@@ -5,11 +5,10 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="stylesheet" href="/css/main.css" />
-    
+    <link rel="stylesheet" href="/css/main.css" !important/>
     
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
-
+    
     <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png"> 
     <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
     <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
@@ -18,7 +17,7 @@
     <meta name="msapplication-TileColor" content="#da532c">
     <meta name="theme-color" content="#ffffff">
 
-    <script src="/loscodigoscool.js"> </script>
+    
 
     <title>Reto JavaScript Equipo COOL</title>
   </head>
@@ -174,34 +173,16 @@
 
         <section class="juniorCard"> <!-- SECCION CENTRAL -->
 
-         
-
-          <!-- <div>
-            <div class="juniorDevSectionPadding">
-              <form method="POST">
-                <label for="title" class="postForms"></label>
-                <input type="text" id="titulo" name="titulo" placeholder="New post title here..." required/>
-                <label for="tags"  class="postForms">
-                  <textarea id="tags" name="postTags" placeholder="Add up to 4 tags..."></textarea>
-                </label>
-                <label for="contenido" class="postForms"></label>
-                <textarea id="contenido" name="contenido" required placeholder="write stuff"></textarea>
-                <input type="submit" value="Publish" />
-              </form>
-            </div>
-          </div> -->
 
           <div class="middleNav">
-            <button  class="btn btnO"><strong>Relevant</strong></button><!-- aquí debería ordenar por lo que nos de la gana -->
-              <button  class="btn btnO">Latest</button><!-- aquí debería ordenar por más nuevos -->
-              <div class="contenedorTop">
-                <button class="btn" id="btnM">Top</button><!-- aquí debería ordenar por más likes -->
-                  <ul class="ulu">
-                  <li class="li" style="margin-right: 10px;"><button class="btn"><strong>Week</strong></button></li>
-                  <li class="li" style="margin-right: 10px;"><button class="btn">Month</button></li>
-                  <li class="li" style="margin-right: 10px;"><button class="btn">Year</button></li>
-                  <li class="li" style="margin-right: 10px;"><button class="btn">Infinity</button></li>
-                </ul>
+            <button class="btn btnO" id="btnO1" onclick="ocultar()"><strong>Relevant</strong></button><!-- aquí debería ordenar por lo que nos de la gana -->
+            <button class="btn btnO" id="btnO2" onclick="ocultar()">Latest</button><!-- aquí debería ordenar por más nuevos -->
+            <button class="btn" id="btnM" onclick="mostrar()">Top</button><!-- aquí debería ordenar por más likes -->
+            <div class="contenedorTop ulu" id="ulu">
+              <button class="btn li"><strong>Week</strong></button>
+              <button class="btn li">Month</button>
+              <button class="btn li">Year</button>
+              <button class="btn li">Infinity</button>
             </div>
             </div>
           
@@ -242,7 +223,7 @@
             <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleInterval" data-bs-slide="next">
               <span class="carousel-control-next-icon" aria-hidden="true"></span>
               <span class="visually-hidden">Next</span>
-            </button>
+            </none;n>
           </div>
 
 
@@ -250,7 +231,6 @@
           <section class="conteiner">
             <div class="contenedorP"> <!-- la caja que crea los post -->
               <form  id="crudForm" class="crudForm">
-           
                 <input type="text" id="titulo" name="titulo"class="titulo" placeholder="agrega Título a tus ideas... " />
                 <textarea id="articulo" class="articulo" name="articulo" cols="30" rows="10" placeholder="¿En qué piensas? " ></textarea>
                 <button id="boton" class="botoncito" type="submit"> Enviar </button>
@@ -696,6 +676,9 @@
       </div>
     </main>
   </body>
+  
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL" crossorigin="anonymous"></script>
+  
   <script src="https://kit.fontawesome.com/acd114ba49.js" crossorigin="anonymous"></script>
+  <script src="/loscodigoscool.js"> </script>
 </html>
