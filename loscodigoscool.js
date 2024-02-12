@@ -91,7 +91,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
       bodyTabla.appendChild(divImagen)
       divImagen.appendChild(creaImagen)
-      creaImagen.src = ''
+      creaImagen.src = `https://ddragon.leagueoflegends.com/cdn/img/champion/splash/Lux_${item.numAleatorio}.jpg`
 
       /*  async function mostrarImagen() {
         const imagenURL = await obtenerImagenAzar('Kled')

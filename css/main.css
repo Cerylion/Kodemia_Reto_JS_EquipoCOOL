@@ -508,9 +508,10 @@ img.fullWidth {
 }
 .conteiner .contenedorP .crudForm .articulo {
   max-width: 100%;
-  max-height: 70%;
+  max-height: 50%;
 }
 .conteiner .contenedorP .crudForm .titulo {
+  border-radius: 8px;
   min-width: 300px;
   max-height: 100%;
 }
