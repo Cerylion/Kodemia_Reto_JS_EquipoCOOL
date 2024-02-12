@@ -245,6 +245,7 @@ document.addEventListener('DOMContentLoaded', () => {
     data.splice(index, 1)
     saveDataLocalStorage()
     generarTabla()
+    
   }
 
   function deleteInfo(index) {
