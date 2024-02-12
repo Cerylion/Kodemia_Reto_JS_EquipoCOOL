@@ -527,18 +527,6 @@ img.fullWidth {
   text-align: center;
 }
 
-.contenedorPost {
-  border: 1px solid rgb(248, 248, 248);
-  border-radius: 20px;
-  font-family: "Roboto", sans-serif;
-  height: 100%;
-  width: 100%;
-  box-shadow: 15px 15px 0px rgba(0, 0, 0, 0.431);
-  display: grid;
-  grid-template-columns: repeat(4, 1fr);
-  justify-items: start;
-}
-
 .nombreUsuario {
   grid-column: -1/-1;
   justify-items: left;
@@ -920,6 +908,14 @@ input[type=submit]:hover {
   }
 }
 .contenedorPost {
+  border: 1px solid rgb(248, 248, 248);
+  border-radius: 20px;
+  font-family: "Roboto", sans-serif;
+  height: 100%;
+  width: 100%;
+  box-shadow: 15px 15px 0px rgba(0, 0, 0, 0.431);
+  grid-template-columns: repeat(4, 1fr);
+  justify-items: start;
   box-shadow: none;
   display: flex;
   margin-top: 10px;
