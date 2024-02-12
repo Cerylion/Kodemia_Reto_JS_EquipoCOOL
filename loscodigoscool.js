@@ -1,4 +1,6 @@
 document.addEventListener('DOMContentLoaded', () => {
+  
+  
   async function obtenerImagenAzar(campeon) {
     try {
       const respuesta = await fetch(
@@ -49,9 +51,12 @@ document.addEventListener('DOMContentLoaded', () => {
     e.preventDefault()
     const titulo = tituloImput.value
     const articulo = articuloImput.value
+    const tiempo= tiempoFuncion()
+    const fecha= fechaFuncion()
+    const numAleatorio = numRandom(1,5)
 
     if (titulo && articulo) {
-      const newPost = { titulo, articulo }
+      const newPost = { titulo, articulo, tiempo, fecha, numAleatorio}
       data.push(newPost)
       saveDataLocalStorage()
       generarTabla()
@@ -168,14 +173,15 @@ document.addEventListener('DOMContentLoaded', () => {
       emojisContenedor.appendChild(emo5)
       emojisContenedor.appendChild(emo6)
 
-      const tiempoContenedor = document.createElement('div')
-      tiempoContenedor.className = 'tiempoContenedor'
-      const tiempo = document.createElement('p')
-      tiempo.type = ''
-      tiempo.textContent = ' 4 min read'
-      tiempo.className = 'tiempo'
+    //tiempo
+    const tiempoContenedor=document.createElement ('div')
+    tiempoContenedor.className='tiempoContenedor'
+    const tiempo=document.createElement ('p')
+    tiempo.type=''
+    tiempo.className='tiempo'
+    tiempo.textContent = item.tiempo
+    tiempoContenedor.appendChild (tiempo)
 
-      tiempoContenedor.appendChild(tiempo)
       //botones
 
       celdaTitulo.textContent = item.titulo
@@ -189,11 +195,22 @@ document.addEventListener('DOMContentLoaded', () => {
 
       editBoton.addEventListener('click', function () {
         editInfo(index)
+        top()
       })
 
       deleteBoton.addEventListener('click', function () {
         deleteInfo(index)
+         top()
       })
+
+      function top (){
+        window.scroll({
+            top: 100,
+            left: 100,
+            behavior: "smooth",
+          });
+      }
+      top()
 
       accionesBoton.appendChild(editBoton)
       accionesBoton.appendChild(deleteBoton)
@@ -211,13 +228,15 @@ document.addEventListener('DOMContentLoaded', () => {
       fila.appendChild(celdaTitulo)
       fila.appendChild(celdaArticulo)
       fila.appendChild(accionesBoton)
-      //fila.appendChild (tagsSection)
-      // fila.appendChild (emojisContenedor)
       fila.appendChild(contenedorReaccionesMas)
 
-      bodyTabla.appendChild(fila)
+     //hace que el post se muestre arriba
+      bodyTabla.prepend(fila)
     })
   }
+
+
+  generarTabla() 
 
   function editInfo(index) {
     const item = data[index]
@@ -234,7 +253,7 @@ document.addEventListener('DOMContentLoaded', () => {
     generarTabla()
   }
 
-  generarTabla()
+ 
 
   /* este es el buscador */
   const d = document
@@ -283,3 +302,36 @@ function ocultar(){
   list.style.visibility="hidden"
 }
 */
+
+//subir a top
+
+
+// hora
+function tiempoFuncion() {
+  let date = new Date()
+   let hours = date.getHours()
+   let min = date.getMinutes()
+   let seg = date.getSeconds()
+return hours + ":" + min + ":" + seg
+}
+tiempoFuncion()
+
+//fecha
+function fechaFuncion() {
+let date = new Date()
+let day = date.getDate()
+let month = date.getMonth() + 1
+let year = date.getFullYear()
+return day + "-" + month + "-" + year
+}
+
+
+//numero random
+ function numRandom (min, max) {
+ var random= Math.floor(Math.random() * (max - min) + min)
+ return random
+}
+numRandom ()
+
+
+
