@@ -1,43 +1,6 @@
 document.addEventListener('DOMContentLoaded', () => {
   
-  
-  async function obtenerImagenAzar(campeon) {
-    try {
-      const respuesta = await fetch(
-        `https://ddragon.leagueoflegends.com/cdn/14.3.1/data/en_US/champion/${campeon}.json`
-      )
-      if (!respuesta.ok) {
-        throw new Error(`Error al obtener los datos del campeón ${campeon}`)
-      }
-      const datos = await respuesta.json()
-      const campeonData = datos.data[campeon]
-      if (!campeonData || !campeonData.skins) {
-        throw new Error(`Datos de skins del campeón ${campeon} no encontrados`)
-      }
-      const skins = campeonData.skins
-      const skinAzar = skins[Math.floor(Math.random() * skins.length)] // para seleccionar una al azar
-      return `https://ddragon.leagueoflegends.com/cdn/img/champion/loading/${campeon}_${skinAzar.num}.jpg`
-    } catch (error) {
-      console.error('Error:', error)
-      return null
-    }
-  }
-
-  async function mostrarImagen() {
-    const imagenURL = await obtenerImagenAzar('Kled')
-    if (imagenURL) {
-      const imagen = document.createElement('img')
-      imagen.src = imagenURL
-      //imagen.className = 'profileImage' esto le agrega la clase a la imagen
-      document.getElementById('insertIMG').src = imagenURL // esto es lo que mete la imagen dentro del cuadrito - no se puede hacer con la clase
-      //document.body.appendChild(imagen) esto mete la imagen al final del doc
-    } else {
-      console.log('No se pudo obtener la imagen.')
-    }
-  }
-
-  mostrarImagen()
-
+ 
   // la magia de los post
 
   const form = document.querySelector('form')
@@ -53,7 +16,7 @@ document.addEventListener('DOMContentLoaded', () => {
     const articulo = articuloImput.value
     const tiempo= tiempoFuncion()
     const fecha= fechaFuncion()
-    const numAleatorio = numRandom(1,5)
+    const numAleatorio = numRandom(0,18)
 
     if (titulo && articulo) {
       const newPost = { titulo, articulo, tiempo, fecha, numAleatorio}
@@ -85,7 +48,8 @@ document.addEventListener('DOMContentLoaded', () => {
 
       bodyTabla.appendChild(divImagen)
       divImagen.appendChild(creaImagen)
-      // creaImagen.src =
+      creaImagen.src = `https://ddragon.leagueoflegends.com/cdn/img/champion/splash/Ahri_${item.numAleatorio}.jpg`
+   
 
       /*  async function mostrarImagen() {
         const imagenURL = await obtenerImagenAzar('Kled')
