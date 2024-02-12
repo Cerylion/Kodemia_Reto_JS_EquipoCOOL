@@ -610,6 +610,14 @@ form#crudForm {
   border-radius: 10px;
 }
 
+.imagenDeUsuario {
+  display: flex;
+  align-items: baseline;
+  flex-wrap: wrap;
+  flex-direction: column-reverse;
+  align-content: space-between;
+}
+
 /*
 
 */
