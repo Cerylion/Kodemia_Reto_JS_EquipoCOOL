@@ -30,7 +30,7 @@
           </div>
           <img src="./assets/dev.png" class="logo" alt="logo"/>
           <div class="inputContainer">
-            <input type="text" placeholder="Search..." class="inputNav"/>
+            <input type="text" placeholder="Search..." class="inputNav"/>  <!-- este es el buscador cool --> 
               <i id="src" class="fa-solid fa-magnifying-glass inputGlass" style="font-size: 20px"></i>
           </div>
         </section>
@@ -48,7 +48,6 @@
 
     <main>
       <div class="mainContainer">
-        
         <aside class="asideLeft"> <!-- ASIDE IZQUIERDO-->
           <section class="logInBox">
             <h2 class="titleLogIn">
@@ -173,16 +172,15 @@
 
         <section class="juniorCard"> <!-- SECCION CENTRAL -->
 
-
           <div class="middleNav">
-            <button class="btn btnO" id="btnO1" onclick="ocultar()"><strong>Relevant</strong></button><!-- aquí debería ordenar por lo que nos de la gana -->
-            <button class="btn btnO" id="btnO2" onclick="ocultar()">Latest</button><!-- aquí debería ordenar por más nuevos -->
-            <button class="btn" id="btnM" onclick="mostrar()">Top</button><!-- aquí debería ordenar por más likes -->
+            <button type="button" class="btn btnO" id="btnO1" onclick="ocultar(), ordenarREL()"><strong>Relevant</strong></button><!-- aquí debería ordenar por lo que nos de la gana -->
+            <button type="button" class="btn btnO" id="btnO2" onclick="ocultar()">Latest</button><!-- aquí debería ordenar por más nuevos -->
+            <button type="button" class="btn" id="btnM" onclick="mostrar()">Top</button><!-- aquí debería ordenar por más likes -->
             <div class="contenedorTop ulu" id="ulu">
-              <button class="btn li"><strong>Week</strong></button>
-              <button class="btn li">Month</button>
-              <button class="btn li">Year</button>
-              <button class="btn li">Infinity</button>
+              <button type="button" class="btn li" id="btnWeek"><strong>Week</strong></button>
+              <button type="button" class="btn li" id="btnMonth">Month</button>
+              <button type="button" class="btn li" id="btnYear">Year</button>
+              <button type="button" class="btn li" id="btnInfinity">Infinity</button>
             </div>
             </div>
           
@@ -226,8 +224,6 @@
             </none;n>
           </div>
 
-
-
           <section class="conteiner">
             <div class="contenedorP"> <!-- la caja que crea los post -->
               <form  id="crudForm" class="crudForm">
@@ -236,61 +232,8 @@
                 <button id="boton" class="botoncito" type="submit"> Enviar </button>
               </form>
             </div>
-
-            <!--Aquí se imprimen los post-->
-            <!-- <div class="postCreado"> 
-              <table id="tabla" class="tabla">
-                <thead>
-                  <tr>
-                    <th class="headerTabla"> </th>
-                    <th class="headerTabla"> </th>
-                  </tr>
-                </thead>
-                <tbody id="bodyTabla" class="bodyTabla">
-                </tbody>
-              </table>
-            </div> -->
-
           </section>
-<!--
-          <div class="juniorDevSectionPadding" id="0"> 
-            <aside>
-              <div class="profileInfo">
-                <img src="" id="insertIMG" class="profileImage" alt="profile picture of a guy smiling"/>
-                <div class="column">
-                  <h3 style="font-size: 16px; color: rgb(64, 64, 64)">Mateusz Charytoniuk</h3>
-                  <h4 class="profile-subtitle">Nov 15</h4>
-                </div>
-              </div>
-            </aside>
-            <div class="paddingOnDesktop">
-              <h1 class="mainTitle">To Junior Developers</h1>
-              <aside class="tagSection">
-                <p class="tags">#programming</p>
-                <p class="tags">#beginners</p>
-                <p class="tags">#career</p>
-                <p class="tags">#productivity</p>
-              </aside>
-              <div class="emoji-section">
-                <div class="setOfEmojis">
-                  <p>💖</p>
-                  <p>🦄</p>
-                  <p>🤩</p>
-                  <p>🙌</p>
-                  <p>🔥</p>
-                  <p class="emojiText">286</p>
-                  <p class="emojiText showOnTabletOnly" style="margin-left: 5px">reactions</p>
-                  <p class="emojiText" style="margin-left: 10px">💬 97</p>
-                  <p class="emojiText showOnTabletOnly" style="margin-left: 10px">comments</p>
-                </div>
-                <div class="bookmarkSection">
-                  4 min read
-                  <img src="assets/bookmark.png" alt="bookmark icon" width="15px" height="15px"/>
-                </div>
-              </div>
-            </div>
-          </div>
--->
+
           <div class="postCreado"> <!--Aquí se imprimen los post-->
             <table id="tabla" class="tabla">
               <thead>
@@ -303,11 +246,6 @@
               </tbody>
             </table>
           </div>
-
-        
-
-          <!-- las cajas de post nuevos se deberían crear, en teoria, AQUI-->
-       
 
           <div class="cajaFlex"> <!-- En estas tarjetas nos podemos poner nosotros y las cosas que hizo cada uno -->
             <article class="articulo">
@@ -381,7 +319,6 @@
           </div>
         </section>
 
-        
         <section class="sideCardContainer"> <!-- este es el lado derecho -->
           <div class="sideCard">
             <p class="cardTitle">#discuss</p>

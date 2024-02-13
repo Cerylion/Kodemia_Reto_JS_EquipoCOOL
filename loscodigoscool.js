@@ -14,7 +14,7 @@ document.addEventListener('DOMContentLoaded', () => {
     const articulo = articuloImput.value
     const tiempo = tiempoFuncion()
     const fecha = fechaFuncion()
-    const numAleatorio = numRandom(1, 9)
+    const numAleatorio = numRandom(1, 120)
     const nombreAleatorio = generateNombreRandom()
     const diaAleatorio = DiaRandom()
     const fechaAleatoria = FechaRandom()
@@ -57,8 +57,8 @@ document.addEventListener('DOMContentLoaded', () => {
       divImagen.textContent = item.diaAleatorio + ' ' + item.fechaAleatoria
       bodyTabla.appendChild(divImagen)
       divImagen.appendChild(creaImagen)
-      creaImagen.src = `https://ddragon.leagueoflegends.com/cdn/img/champion/splash/Lux_${item.numAleatorio}.jpg`
-
+      creaImagen.src = `https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/${item.numAleatorio}.png`
+      
       //contenedorPost//
       const fila = document.createElement('div')
       fila.className = 'contenedorPost'
@@ -153,6 +153,7 @@ document.addEventListener('DOMContentLoaded', () => {
       }
       top()
 
+
       accionesBoton.append(editBoton, deleteBoton)
 
       //contenedor
@@ -200,6 +201,31 @@ document.addEventListener('DOMContentLoaded', () => {
   }
   searchFilters('.inputNav', '.contenedorPost')
 })
+
+let posts = JSON.parse(localStorage.getItem('formData')) || []
+
+const ordenarREL = () => {
+  let item = posts
+  const newARR = []
+  for (const [key, value] of Object.entries(item)) {
+    newARR.push(value['titulo'])
+    console.log(`${key}: ${value['titulo']}`)
+    
+  }
+  console.log(newARR)
+  newARR.sort()
+  console.log(newARR)
+
+
+  /* for (const i in item) {
+    console.log(typeof i)
+    console.log(i.value)
+  } */
+
+  /* console.log(typeof item)
+  console.log(item.sort((a, b) => new Date(a.fechaAleatoria).getTime() > new Date(b.fechaAleatoria).getTime()))
+  console.log(item.fecha) */
+}
 
 // Mostrar y ocultar los buscadores por fechas
 const mostrar = () => {
