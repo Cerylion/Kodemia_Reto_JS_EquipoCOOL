@@ -1,0 +1,149 @@
+.juniorCard {
+  background-color: #f5f5f5;
+  margin-bottom: 10px;
+}
+
+img.fullWidth {
+  width: 100%;
+  height: auto;
+  object-fit: contain;
+  padding-left: -20px;
+
+  @media (min-width: 768px) {
+      border-radius: 10px 10px 0 0;
+  }
+}
+
+.juniorDevSectionPadding {
+  padding: 25px;
+  background-color: #fff;
+  margin-bottom: 10px;
+  border-radius: 10px;
+  @media (min-width: 1024px) {
+      padding: 20px;
+  }
+}
+
+.profileImage {
+  width: 40px;
+  height: 40px;
+  border-radius: 50px;
+}
+
+.profileInfo {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  max-width: 346px;
+  max-height: 42px;
+  gap: 10px;
+  box-sizing: border-box;
+}
+
+.column {
+  display: flex;
+  flex-direction: column;
+  height: 42px;
+}
+
+.profile-subtitle {
+  font-size: 12px;
+  color: #717171;
+  font-weight: 300;
+}
+
+.emoji-section {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 10px;
+  flex-wrap: wrap;
+}
+
+.emoji {
+  display: flex;
+  gap: 8px;
+}
+
+.mainTitle {
+  font-size: 20px;
+  margin-top: 10px;
+  @media (min-width: 640px) {
+      font-size: 30px;
+  }
+}
+
+.mainTitle:hover {
+  color: blue;
+}
+
+.tagSection {
+  display: flex;
+  gap: 10px;
+}
+
+.tags {
+  background: transparent;
+  color: #717171;
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  font-weight: 300;
+  font-size: 14px;
+  padding: 5px;
+}
+
+.tags:hover {
+  background-color: #71717120;
+  outline: 1.5px solid #71717170;
+  border-radius: 5px;
+}
+
+.commentSection {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 20px;
+}
+
+.setOfEmojis {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 2px 1 2px 1;
+}
+
+.emojiText {
+  font-size: 12px;
+  color: #717171;
+}
+
+.bookmarkSection {
+  font-size: 12px;
+  color: #717171;
+  display: flex;
+  gap: 10px;
+  padding: 5px;
+}
+
+.showOnTabletOnly {
+  display: none;
+  @media (min-width: 640px) {
+      display: block;
+  }
+}
+
+.paddingOnDesktop {
+  @media (min-width: 1024px) {
+      padding-left: 40px;
+  }
+}
+
+.bookmarkSection img:hover {
+  background-color: #f5f5f5;
+  outline: #f5f5f5;
+}
+
+.setOfEmojis:hover {
+  background-color: #f5f5f5;
+}

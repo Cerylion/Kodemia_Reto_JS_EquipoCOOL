@@ -1,0 +1,389 @@
+@use "sideCard";
+@use 'to-junior-dev';
+@use 'weekly';
+@use 'conteiner';
+/*
+
+*/
+
+* {
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto,
+    Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+}
+
+
+
+body {
+  margin: 0;
+  background-color: #f5f5f5;
+  background: rgb(245, 245, 245);
+  font-family: apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif, 'Apple Color Emoji', 'Segoe UI Emoji', 'Segoe UI Symbol';
+  header {
+    background: #fff;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    .headerContainer {
+      max-width: 1280px;
+      width: 100%;
+      position: relative;
+      display: flex;
+      justify-content: space-between;
+      background: #fff;
+      height: 60px;
+      min-width: 410px;
+      .hamburgerContainer {
+        display: flex;
+        align-items: center;
+        padding-left: 29px;
+        gap: 10px;
+      }
+      .searchContainer {
+        position: relative;
+        display: flex;
+        align-items: center;
+        gap: 10px;
+        padding: 20px;
+        a {
+          text-decoration: none;
+          color: #3b49df;
+          border-radius: 4px;
+          padding: 7px 15px;
+          &:hover {
+            text-align: center;
+            background-color: #3b49df1a;
+            text-decoration: underline;
+          }
+        }
+        .createAccountHeader {
+          text-decoration: none;
+          color: #3b49df;
+          font-size: 16px;
+          border-radius: 4px;
+          padding: 7px 15px;
+          border: 1px solid #3b49df;
+          &:hover {
+            background-color: #3b49df;
+            color: #fff;
+            text-decoration: underline;
+          }
+        }
+      }
+    }
+  }
+  main {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    .mainContainer {
+      box-sizing: border-box;
+      max-width: 1180px;
+
+      .asideLeft {
+        width: 232px;
+        margin: 10px;
+        .logInBox {
+          display: flex;
+          background: #fff;
+          flex-direction: column;
+          border-radius: 10px;
+          padding: 16px;
+          margin-top: -10px;
+          .logInButtons {
+            display: flex;
+            align-items: center;
+            gap: 5px;
+            font-size: 16px;
+            flex-direction: column;
+            padding: 10px;
+            .A {
+              text-decoration: none;
+              color: black;
+              font-size: 16px;
+              border-radius: 4px;
+              padding: 7px 15px;
+            }
+          }
+        }
+        .asideNav {
+          width: 100%;
+          margin-top: 30px;
+          a {
+            font-size: 15px;
+            text-decoration: none;
+            width: 100%;
+            color: black;
+          }
+          .asideIcons i {
+            font-size: 23px;
+            padding: 5px;
+            margin-right: 0;
+            &:hover {
+              padding: 5px;
+              background: #3b49df1a;
+            }
+          }
+          i {
+            font-size: 17px;
+            margin-right: 15px;
+          }
+          li {
+            list-style: none;
+            padding: 7px 15px;
+            &:hover {
+              background-color: #3b49df1a;
+              width: 80%;
+              border-radius: 4px;
+              text-decoration: underline;
+            }
+          }
+          .other {
+            margin-bottom: 30px;
+          }
+          ul {
+            display: flex;
+            align-self: start;
+            flex-direction: column;
+            margin: 0;
+            padding-left: 0;
+            width: 100%;
+          }
+        }
+      }
+      .juniorDevSectionPadding {
+        display: flex;
+        .postForms {
+          display: flex;
+          gap: 10px;
+          font-size: 16px;
+          flex-direction: column;
+          border-radius: 4px;
+          border: transparent;
+          justify-content: flex-start;
+          align-items: center;
+          box-sizing: border-box;
+        }
+      }
+    }
+  }
+}
+
+.filter {
+  display: none;
+}
+
+h1, h2, h3, h4 {
+  margin: 0;
+}
+.inputNav {
+  height: 28px;
+  width: 340px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+}
+.logo {
+  height: 40px;
+  width: 50px;
+}
+#createAccountBtn {
+  color: #3b49df;
+  text-align: center;
+  width: 90%;
+  font-size: 16px;
+  border-radius: 4px;
+  padding: 7px 15px;
+  border: 1px solid #3b49df;
+  &:hover {
+    background-color: #3b49df;
+    color: #fff;
+    text-decoration: underline;
+  }
+}
+#logInAside:hover {
+  text-align: center;
+  background-color: #3b49df1a;
+  width: 90%;
+  text-decoration: underline;
+}
+
+
+.middleNav {
+  background-color: #f5f5f5;
+  height: 44px;
+  display: grid;
+  grid-auto-flow: column;
+  flex-direction: row;
+  align-items: center;
+  gap: 10px;
+  margin-left: 10px;
+  .btn{
+    display:flex;
+    
+    text-decoration: none;
+    color: #575757;
+    padding: 8px 12px;
+    border: 0px;
+    &:hover {
+      background-color: #fff;
+      color: #3b49df;
+      border-radius: 8px;
+    }
+  }
+  .contenedorTop{
+    justify-self:flex-end;
+    display:none;
+    height: 40px;
+    width: fit-content;
+    #ulu{
+      padding: 0;
+      display:none;
+    }
+  }
+}
+
+input[type='submit'] {
+  padding: 10px 20px;
+  background-color: #2583e7;
+  color: #fff;
+  border: none;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  font-size: 16px;
+  flex-direction: column;
+  border-radius: 4px;
+  &:hover {
+    background-color: #0056b3;
+  }
+}
+
+/* not part of the navbar don't touch */
+
+.mainContainer {
+  
+  @media (min-width: 768px) {
+    display: grid;
+    grid-template-columns: 232px minmax(480px, 2fr);
+    gap: 20px;
+    padding: 16px;
+  }
+  @media (min-width: 1024px) {
+    grid-template-columns: 232px minmax(480px, 2fr) 1fr;
+  }
+}
+
+/* normal media queries */
+
+@media screen and (min-width: 768px) {
+  .hamburger {
+    position: relative;
+  }
+  .logInHeader {
+    position: absolute;
+    top: -50px;
+  }
+}
+
+@media screen and (min-width: 741px) {
+  .hamburger {
+    position: absolute;
+    top: -40px;
+  }
+  .glassIcon {
+    position: absolute;
+    top: -80px;
+  }
+  .logInHeader {
+    position: relative;
+    top: 0;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .logInHeader {
+    position: absolute;
+    top: -50px;
+  }
+  .inputContainer {
+    position: absolute;
+    top: -80px;
+  }
+  .asideLeft {
+    position: absolute;
+    left: -400px;
+  }
+}
+
+/* Estilos para pantallas grandes (mayores o iguales a 741px) */
+@media screen and (min-width: 741px) {
+  .logInHeader {
+    position: relative;
+    top: 0;
+  }
+  .inputContainer {
+    position: relative;
+    top: 0;
+  }
+  .inputGlass {
+    padding: 5px;
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    right: 1px;
+    margin-left: auto;
+    margin-right: auto;
+  }
+  .inputGlass:hover {
+    background: #3b49df1a;
+    color: #3b49df;
+    border-radius: 5px;
+  }
+}
+
+.bodyTabla{
+  max-width: 100%;
+  min-width: 100%;
+  }
+
+  .tabla {
+    max-width: 100%;
+    min-width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-content: center;
+    justify-content: center;
+}
+
+.botoncito {
+  color: #3b49df;
+  text-align: center;
+  width: 100%;
+  font-size: 16px;
+  border-radius: 4px;
+  padding: 7px 15px;
+  border: 1px solid #3b49df;
+  background-color: rgb( 255, 255, 255 );
+  text-decoration: none;
+}
+.botoncito:hover{
+  background-color: #3b49df;
+  color: #fff;
+  text-decoration: underline;
+  opacity: none;
+}
+
+
+.botonesContenedor {
+  justify-items: right;
+  font-size: 8px;
+  display: flex;
+  max-width: 100px;
+  max-height: 50px;
+  flex-wrap: nowrap;
+  flex-direction: row;
+  align-content: flex-end;
+  justify-content: space-between;
+  align-items: flex-start;
+}
+
