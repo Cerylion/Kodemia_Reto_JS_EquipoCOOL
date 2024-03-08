@@ -1,5 +1,26 @@
 document.addEventListener('DOMContentLoaded', () => {
 
+  const mostrar = () => {
+    const list = document.getElementById('ulu')
+    list.style.display = 'flex'
+  }
+  const ocultar = () => {
+    const list = document.getElementById('ulu')
+    list.style.display = 'none'
+  }
+  console.log(document.getElementById('btnM'))
+  const BTNO = document.getElementsByClassName('btnO')
+  
+  console.log(BTNO)
+  for (let element in BTNO) {
+    const ele = BTNO[element]
+    if (typeof ele === 'object') {
+      ele.addEventListener('click', ocultar)
+    }
+  }
+
+  document.getElementById('btnM').addEventListener('click', mostrar)
+
   // la magia de los post
   const form = document.querySelector('form')
   const tituloImput = document.getElementById('titulo')
@@ -228,14 +249,7 @@ const ordenarREL = () => {
 }
 
 // Mostrar y ocultar los buscadores por fechas
-const mostrar = () => {
-  const list = document.getElementById('ulu')
-  list.style.display = 'flex'
-}
-const ocultar = () => {
-  const list = document.getElementById('ulu')
-  list.style.display = 'none'
-}
+
 
 // hora
 const tiempoFuncion = () => {
