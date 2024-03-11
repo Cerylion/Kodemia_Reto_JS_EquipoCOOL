@@ -39,6 +39,7 @@ npm i nodemon
 npm i mongoose
 npm i dotenv
 npm i bcrypt // si se va a utilizar encriptado
+npm i jsonwebtoken
 
 revisar archivo package.json y que quede con las sigiente config
 
@@ -49,8 +50,8 @@ revisar archivo package.json y que quede con las sigiente config
   "main": "app.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "start": "node app.js",//agregar esta configuracion
-    "dev": "nodemon --watch . ./app.js" //depdende del nombre del archivo
+    "start": "node app.js",
+    "dev": "nodemon --watch . ./app.js"
   },
   "author": "",
   "license": "ISC",
@@ -58,6 +59,7 @@ revisar archivo package.json y que quede con las sigiente config
     "bcrypt": "^5.1.1",
     "dotenv": "^16.4.5",
     "express": "^4.18.3",
+    "jsonwebtoken": "^9.0.2",
     "mongoose": "^8.2.1",
     "nodemon": "^3.1.0"
   }

@@ -1,5 +1,6 @@
 const mongoose= require('mongoose')
 const bcrypt = require('bcrypt')
+const jwt = require('jsonwebtoken')
 
 const userSchema = new mongoose.Schema({
     first_name: {
@@ -32,6 +33,10 @@ const userSchema = new mongoose.Schema({
         },
         isValidPassword: async (password, hash) => {
             return await bcrypt.compare(password, hash)
+        },
+        createToken: async (payload) => {
+            
+            return jwt.sign(payload, process.env.JWT_SIGN, {expiresIn: '3d'})
         }
     }
 

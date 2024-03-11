@@ -12,8 +12,8 @@ router.post('/login', async (req, res) => {
     if (!user || !(await User.isValidPassword(password, user.password))) {
       res.status(401).send({message: "password o email no valido"})
     } else {
-
-      res.status(201).send({message: "Login exitoso", data: user._id})
+      const token = await User.createToken({_id: user._id, first_name: user.first_name})
+      res.status(201).send({message: "Login exitoso", data: token})
     }
 
 
