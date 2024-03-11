@@ -4,7 +4,9 @@ En la siguiente direccion es donde crea un nuevo usuario con el metodo post
 mandandolo como raw en un json
 http://localhost:3000/users/signup
 
-Para logearse se debe usar metodo post con el email y la contraseña de un usuario existente
+Para logearse se debe usar metodo post con el email y la contraseña de un usuario existente que haya sido 
+creado despues de modificar la autenticacion con hash con bcrypt, porque si no dara error de usuario o
+password no valido
 http://localhost:3000/users/login
 
 
@@ -38,7 +40,7 @@ npm i mongoose
 npm i dotenv
 npm i bcrypt // si se va a utilizar encriptado
 
-revisar archivo package.json
+revisar archivo package.json y que quede con las sigiente config
 
 {
   "name": "backend",
@@ -61,5 +63,5 @@ revisar archivo package.json
   }
 }
 
-revisar en ./src/db/db la condiguracionde conexcion con la base de datos y el archivo .env
+revisar en ./src/db/db la condiguracionde conexion con la base de datos y el archivo .env
 por ultimo revisar que el puerto este libre

@@ -9,11 +9,11 @@ router.post('/login', async (req, res) => {
   try{
     const { email, password} = req.body
     const user = await User.findOne({email: email})
-    if (!user || user.password != password) {
+    if (!user || !(await User.isValidPassword(password, user.password))) {
       res.status(401).send({message: "password o email no valido"})
     } else {
 
-      res.status(201).send({message: "Login exitoso", data: ""})
+      res.status(201).send({message: "Login exitoso", data: user._id})
     }
 
 
@@ -24,7 +24,8 @@ router.post('/login', async (req, res) => {
 
 router.post('/signup', async (req, res) => {
     try{
-      const user = req.body
+      let user = req.body
+      user.password = await User.encryptPassword(user.password)
       const newUser = await User.create(user)
       await newUser.save()
       res.status(201).send({message: "Usuario creado", data: newUser})

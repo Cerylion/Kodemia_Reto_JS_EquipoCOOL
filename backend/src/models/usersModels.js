@@ -1,4 +1,5 @@
 const mongoose= require('mongoose')
+const bcrypt = require('bcrypt')
 
 const userSchema = new mongoose.Schema({
     first_name: {
@@ -23,7 +24,17 @@ const userSchema = new mongoose.Schema({
 
 },
 {
-    timestamp: true
+    timestamps: true,
+    statics: {
+        encryptPassword: async (password) =>{
+            const salt = await bcrypt.genSalt(15)
+            return await bcrypt.hash(password, salt)
+        },
+        isValidPassword: async (password, hash) => {
+            return await bcrypt.compare(password, hash)
+        }
+    }
+
 }
 )
 

@@ -1,10 +1,15 @@
+const User = require('../models/usersModels')
+
 async function validUserId(req, res, next) {
     const { userid } = req.headers
-    const { id } = req.params
 
-    if (userid != id ) {
+    const user = await User.findById(userid)
+
+
+    if (!user) {
         res.status(401).send({message: "Usuario no autorizado"})
     }else {
+        req.user = user
         next()
     }
 }

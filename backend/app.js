@@ -2,6 +2,7 @@ require('dotenv').config()
 const express = require('express')
 const app = express()
 const userRoutes = require('./src/routes/users')
+
 const mongoDB = require('./src/db/db')
 const port = 3000
 
@@ -12,6 +13,7 @@ app.get('/', (req, res) => {
 })
 
 app.use('/users', userRoutes)
+// app.use('/message', messageRoutes)
 
 mongoDB.connect.then((message) =>{
     console.log(message)
